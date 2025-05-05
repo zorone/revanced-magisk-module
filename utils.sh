@@ -108,6 +108,7 @@ get_rv_prebuilts() {
 					mv -f "${file}-zip/extensions/shared-patched.rve" "${file}-zip/extensions/shared.rve" || return 1
 					rm "${file}" || return 1
 					cd "${file}-zip" || abort
+					pr "Compress file to ${CWD}/${file}" >&2
 					zip -0rq "${CWD}/${file}" . || return 1
 				) >&2; then
 					echo >&2 "Patching revanced-integrations failed"
