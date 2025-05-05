@@ -319,7 +319,7 @@ dl_apkmirror() {
 	else
 		if [ "$arch" = "arm-v7a" ]; then arch="armeabi-v7a"; fi
 		local resp node app_table dlurl=""
-		url="${url}/${url##*/}-${version//./-}-release"
+		url="ma${url}/${url##*/}-${version//./-}-release"
 		resp=$(req "$url" -) || return 1
 		node=$($HTMLQ "div.table-row.headerFont:nth-last-child(1)" -r "span:nth-child(n+3)" <<<"$resp")
 		echo "$arch: Node: $node"
