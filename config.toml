@@ -6,6 +6,8 @@ parallel-jobs = 1
 
 # you can use rvmm-config-gen to generate a config
 
+# patches-version = "v3.0.0-dev.4"
+
 [YouTube]
 build-mode = "both"
 excluded-patches = ""
@@ -50,6 +52,17 @@ rv-brand = "ReVanced Extended"
 build-mode = "both"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.youtube"
+
+[Youtube-Extended-Abknc]
+enabled = false
+app-name = "YouTube"
+patches-source = "inotia00/revanced-patches"
+cli-source = "inotia00/revanced-cli"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube/"
+build-mode = "both"
+included-patches = "'Custom branding icon for YouTube' 'Custom branding name for YouTube' 'Hide Shorts dimming' 'Hide shortcuts' 'MaterialYou' 'Change Version Code'"
+excluded-patches = "'Disable splash animation' 'Enable debug logging'"
+patcher-args = "-OiconType='Cairo' -OappIcon='mmt' -OappName='YouTube' -OdoubleTapLengthArrays='3, 5, 10, 15, 20, 30, 60, 120, 180' -OBackgroundColor='@android:color/transparent' -OpackageNameYouTube='rvx.android.youtube' -OiconType='rounded' -OchangeTopButtons=true -OchangeVersionCode=true -OsettingsLabel='eXtended' -OinsertPosition='@string/about_key' -OcornerRadius='4.0dip' -OdarkThemeBackgroundColor='?ytBaseBackground' -OlightThemeBackgroundColor='?ytBaseBackground' -OstrokeColor='?attr/ytChipBackground' -OdarkThemeBackgroundColor='@android:color/black' -OlightThemeBackgroundColor='@android:color/white' -OselectedTranslations='ar, id-rID, ja-rJP' -OsettingsMenuIcon='yt_alt'"
 
 [Twitch]
 enabled = false
