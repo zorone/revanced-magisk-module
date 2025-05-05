@@ -36,7 +36,7 @@ uptodown-dlurl = "https://google-photos.en.uptodown.com/android"
 
 # dont build on gh actions (https://github.com/j-hc/revanced-magisk-module/issues/554)
 [Music-Extended]
-enabled = true
+enabled = false
 app-name = "Music"
 patches-source = "inotia00/revanced-patches"
 cli-source = "inotia00/revanced-cli"
@@ -80,7 +80,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.apps.youtube.music"
 rv-brand = "ReVanced Extended"
 build-mode = "both"
-included-patches = "'Hide overlay filter' 'Hide player overlay filter'"
+included-patches = "'Hide overlay filter'"
 # excluded-patches = "'Custom package name'"
 patcher-args = "-OiconType='Cairo' -OappIcon='mmt' -OBackgroundColor='@android:color/transparent' -OpackageNameYouTube='rvx.android.music' -OiconType='rounded' -OchangeTopButtons=true -OchangeVersionCode=true -OsettingsLabel='eXtended' -OinsertPosition='@string/about_key' -OcornerRadius='4.0dip' -OdarkThemeBackgroundColor='?ytBaseBackground' -OlightThemeBackgroundColor='?ytBaseBackground' -OstrokeColor='?attr/ytChipBackground' -OdarkThemeBackgroundColor='@android:color/black' -OlightThemeBackgroundColor='@android:color/white' -OsettingsMenuIcon='yt_alt'"
 
