@@ -101,9 +101,13 @@ get_rv_prebuilts() {
 		if [ "$tag" = "Patches" ]; then
 			if [ $grab_cl = true ]; then echo -e "[Changelog](https://github.com/${src}/releases/tag/${tag_name})\n" >>"${cl_dir}/changelog.md"; fi
 			if [ "$REMOVE_RV_INTEGRATIONS_CHECKS" = true ]; then
-				if ! (
+				if [ ! -d "${file}-zip" ]; then
 					mkdir -p "${file}-zip" || return 1
+					pr "Extracting ${file}" >&2 
 					unzip -qo "${file}" -d "${file}-zip" || return 1
+				fi
+				
+				if ! (
 					java -cp "${BIN_DIR}/paccer.jar:${BIN_DIR}/dexlib2.jar" com.jhc.Main "${file}-zip/extensions/shared.rve" "${file}-zip/extensions/shared-patched.rve" || return 1
 					mv -f "${file}-zip/extensions/shared-patched.rve" "${file}-zip/extensions/shared.rve" || return 1
 					rm "${file}" || return 1
@@ -111,9 +115,10 @@ get_rv_prebuilts() {
 					pr "Compress file to ${CWD}/${file}" >&2
 					zip -0rq "${CWD}/${file}" . || return 1
 				) >&2; then
-					echo >&2 "Patching revanced-integrations failed"
+					echo >&2 
+					# echo >&2 "Patching revanced-integrations failed" TODO: Differenciate between old patcher (prior Dec 11, 2024), and new one
 				fi
-				rm -r "${file}-zip" || :
+				# rm -r "${file}-zip" || :
 			fi
 		fi
 		echo -n "$file "
@@ -301,7 +306,7 @@ apk_mirror_search() {
 		if [ "$(sed -n 3p <<<"$app_table")" = "$apk_bundle" ] && [ "$(sed -n 6p <<<"$app_table")" = "$dpi" ] &&
 			isoneof "$(sed -n 4p <<<"$app_table")" "${apparch[@]}"; then
 			dlurl=$($HTMLQ --base https://www.apkmirror.com --attribute href "div:nth-child(1) > a:nth-child(1)" <<<"$node")
-			echo "$dlurl"
+			pr "Got $dlurl" >&2
 			return 0
 		fi
 	done
@@ -314,9 +319,10 @@ dl_apkmirror() {
 	else
 		if [ "$arch" = "arm-v7a" ]; then arch="armeabi-v7a"; fi
 		local resp node app_table dlurl=""
-		url="${url}/${url##*/}-${version//./-}-release/"
+		url="${url}/${url##*/}-${version//./-}-release"
 		resp=$(req "$url" -) || return 1
 		node=$($HTMLQ "div.table-row.headerFont:nth-last-child(1)" -r "span:nth-child(n+3)" <<<"$resp")
+		echo "$arch: Node: $node"
 		if [ "$node" ]; then
 			if ! dlurl=$(apk_mirror_search "$resp" "$dpi" "${arch}" "APK"); then
 				if ! dlurl=$(apk_mirror_search "$resp" "$dpi" "${arch}" "BUNDLE"); then
@@ -324,12 +330,14 @@ dl_apkmirror() {
 				else is_bundle=true; fi
 			fi
 			[ -z "$dlurl" ] && return 1
+			echo >&2 "Got $dlurl"
 			resp=$(req "$dlurl" -)
 		fi
 		url=$(echo "$resp" | $HTMLQ --base https://www.apkmirror.com --attribute href "a.btn") || return 1
 		url=$(req "$url" - | $HTMLQ --base https://www.apkmirror.com --attribute href "span > a[rel = nofollow]") || return 1
 	fi
-
+	
+	echo "Got download link: $url" >&2
 	if [ "$is_bundle" = true ]; then
 		req "$url" "${output}.apkm"
 		merge_splits "${output}.apkm" "${output}"
