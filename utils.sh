@@ -76,7 +76,7 @@ get_rv_prebuilts() {
 
 		local url file tag_name name
 		file=$(find "$dir" -name "${fprefix}-${name_ver#v}.${ext}" -type f 2>/dev/null)
-		if ( [ -z "$file" ] && $name_ver != "*"); then
+		if  [ -z "$file" ] || [[ $name_ver = "*" ]]; then
 			local resp asset name
 			resp=$(gh_req "$rv_rel" -) || return 1
 			if [ "$ver" = "dev" ]; then resp=$(jq -r '.[0]' <<<"$resp"); fi
