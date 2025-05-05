@@ -189,7 +189,7 @@ _req() {
 	shift 2
 	if [ "$op" = - ]; then
 		curl -L -c "$TEMP_DIR/cookie.txt" -b "$TEMP_DIR/cookie.txt" --connect-timeout 5 --retry 0 --fail -s -S "$@" "$ip"
-		echo "$ip is accessible."
+		echo >&2 "$ip is accessible."
 	else
 		if [ -f "$op" ]; then return; fi
 		local dlp
@@ -199,7 +199,7 @@ _req() {
 			return
 		fi
 		curl -L -c "$TEMP_DIR/cookie.txt" -b "$TEMP_DIR/cookie.txt" --connect-timeout 5 --retry 0 --fail -s -S "$@" "$ip" -o "$dlp" || return 1
-		echo "File $op is downloaded successfully."
+		echo >&2 "File $op is downloaded successfully."
 		mv -f "$dlp" "$op"
 	fi
 }
