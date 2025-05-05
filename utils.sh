@@ -188,6 +188,7 @@ _req() {
 	shift 2
 	if [ "$op" = - ]; then
 		curl -L -c "$TEMP_DIR/cookie.txt" -b "$TEMP_DIR/cookie.txt" --connect-timeout 5 --retry 0 --fail -s -S "$@" "$ip"
+		echo "$ip is accessible."
 	else
 		if [ -f "$op" ]; then return; fi
 		local dlp
@@ -197,6 +198,7 @@ _req() {
 			return
 		fi
 		curl -L -c "$TEMP_DIR/cookie.txt" -b "$TEMP_DIR/cookie.txt" --connect-timeout 5 --retry 0 --fail -s -S "$@" "$ip" -o "$dlp" || return 1
+		echo "File $op is downloaded successfully."
 		mv -f "$dlp" "$op"
 	fi
 }
@@ -291,7 +293,7 @@ apk_mirror_search() {
 	if [ "$arch" = all ]; then
 		apparch=(universal noarch 'arm64-v8a + armeabi-v7a')
 	else apparch=("$arch" universal noarch 'arm64-v8a + armeabi-v7a'); fi
-	for ((n = 1; n < 40; n++)); do
+	for ((n = 1; n < 100; n++)); do
 		node=$($HTMLQ "div.table-row.headerFont:nth-last-child($n)" -r "span:nth-child(n+3)" <<<"$resp")
 		if [ -z "$node" ]; then break; fi
 		app_table=$($HTMLQ --text --ignore-whitespace <<<"$node")

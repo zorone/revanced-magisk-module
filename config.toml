@@ -47,7 +47,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.apps.youtube.music"
 
 [YouTube-Extended]
-enabled = true
+enabled = false
 app-name = "YouTube"
 patches-source = "inotia00/revanced-patches"
 cli-source = "inotia00/revanced-cli"
@@ -57,12 +57,12 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.youtube"
 
 [Youtube-Extended-Abknc]
-enabled = true
+enabled = false
 app-name = "RVX YouTube"
 patches-source = "anddea/revanced-patches"
 cli-source = "inotia00/revanced-cli"
 version = "auto"
-apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube/"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube"
 rv-brand = "ReVanced Extended"
 build-mode = "both"
 arch = "both"
@@ -76,7 +76,7 @@ app-name = "RVX Music"
 patches-source = "anddea/revanced-patches"
 cli-source = "inotia00/revanced-cli"
 version = "auto"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music/"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.apps.youtube.music"
 rv-brand = "ReVanced Extended"
 build-mode = "both"
