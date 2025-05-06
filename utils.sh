@@ -317,6 +317,8 @@ apk_mirror_search() {
 	done
 	if [ -z "$node" ]; then
 		epr "Couldn't find any node with CSS condition \"div.table-row.headerFont:nth-last-child(n)\" -r \"span:nth-child(n+3)\" " >&2
+		epr "More debugging info:" >&2
+		epr "$resp" >&2
 	else
 		epr "Couldn't get link with condition: $apk_bundle, dpi = $dpi, arch = $arch" >&2
 	fi
@@ -571,10 +573,10 @@ build_rv() {
 		else
 			patched_apk_name="${app_name_l}-${rv_brand_f}-${version_f}-${arch_f}.apk"
 		fi
-		if [ -f "${BUILD_DIR}/${patched_apk_name}"]; then
+		if [ -f "${BUILD_DIR}/${patched_apk_name}" ]; then
 			read -p "File already been built. Rebuild? (Y/N): " confirm && 
 			[[ $confirm == [yY] || $confirm == [yY][eE][sS] ]] ||
-			continue
+			continue;
 		fi
 		patched_apk="${TEMP_DIR}/${patched_apk_name}"
 		if [ -n "$microg_patch" ]; then
