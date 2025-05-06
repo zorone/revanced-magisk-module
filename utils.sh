@@ -571,7 +571,7 @@ build_rv() {
 		else
 			patched_apk_name="${app_name_l}-${rv_brand_f}-${version_f}-${arch_f}.apk"
 		fi
-		if [ -f "${BUILD_DIR}/${patched_apk_name}"]
+		if [ -f "${BUILD_DIR}/${patched_apk_name}"]; then
 			read -p "File already been built. Rebuild? (Y/N): " confirm && 
 			[[ $confirm == [yY] || $confirm == [yY][eE][sS] ]] ||
 			continue
