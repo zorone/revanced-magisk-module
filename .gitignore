@@ -1,7 +1,9 @@
 *.apk
 *.zip
 /temp
+/.temp
 /build
+/.build
 test*
 /logs
 build.md

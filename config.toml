@@ -36,7 +36,7 @@ uptodown-dlurl = "https://google-photos.en.uptodown.com/android"
 
 # dont build on gh actions (https://github.com/j-hc/revanced-magisk-module/issues/554)
 [Music-Extended]
-enabled = false
+enabled = true
 app-name = "Music"
 patches-source = "inotia00/revanced-patches"
 cli-source = "inotia00/revanced-cli"
@@ -71,7 +71,7 @@ excluded-patches = "'Disable splash animation' 'Enable debug logging'"
 patcher-args = "-OiconType='Cairo' -OappIcon='mmt' -OdoubleTapLengthArrays='3, 5, 10, 15, 20, 30, 60, 120, 180' -OBackgroundColor='@android:color/transparent' -OpackageNameYouTube='rvx.android.youtube' -OiconType='rounded' -OchangeTopButtons=true -OchangeVersionCode=true -OsettingsLabel='eXtended' -OinsertPosition='@string/about_key' -OcornerRadius='4.0dip' -OdarkThemeBackgroundColor='?ytBaseBackground' -OlightThemeBackgroundColor='?ytBaseBackground' -OstrokeColor='?attr/ytChipBackground' -OdarkThemeBackgroundColor='@android:color/black' -OlightThemeBackgroundColor='@android:color/white' -OsettingsMenuIcon='yt_alt'"
 
 [Music-Extended-Abknc]
-enabled = false
+enabled = true
 app-name = "RVX Music"
 patches-source = "anddea/revanced-patches"
 cli-source = "inotia00/revanced-cli"

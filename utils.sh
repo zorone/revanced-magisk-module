@@ -193,8 +193,9 @@ _req() {
 	local ip="$1" op="$2"
 	shift 2
 	if [ "$op" = - ]; then
+		echo >&2 "Request link: $ip"
 		curl -L -c "$TEMP_DIR/cookie.txt" -b "$TEMP_DIR/cookie.txt" --connect-timeout 5 --retry 0 --fail -s -S "$@" "$ip"
-		echo >&2 "$ip is accessible."
+		echo >&2 "Got link: $ip"
 	else
 		if [ -f "$op" ]; then return; fi
 		local dlp
@@ -306,7 +307,7 @@ apk_mirror_search() {
 		if [ "$(sed -n 3p <<<"$app_table")" = "$apk_bundle" ] && [ "$(sed -n 6p <<<"$app_table")" = "$dpi" ] &&
 			isoneof "$(sed -n 4p <<<"$app_table")" "${apparch[@]}"; then
 			dlurl=$($HTMLQ --base https://www.apkmirror.com --attribute href "div:nth-child(1) > a:nth-child(1)" <<<"$node")
-			pr "Got $dlurl" >&2
+			pr "Got link: $dlurl" >&2
 			return 0
 		fi
 	done
@@ -319,8 +320,9 @@ dl_apkmirror() {
 	else
 		if [ "$arch" = "arm-v7a" ]; then arch="armeabi-v7a"; fi
 		local resp node app_table dlurl=""
-		url="ma${url}/${url##*/}-${version//./-}-release"
+		url="${url}/${url##*/}-${version//./-}-release"
 		resp=$(req "$url" -) || return 1
+		pr "Get response from $url" >&2
 		node=$($HTMLQ "div.table-row.headerFont:nth-last-child(1)" -r "span:nth-child(n+3)" <<<"$resp")
 		echo "$arch: Node: $node"
 		if [ "$node" ]; then
@@ -330,11 +332,15 @@ dl_apkmirror() {
 				else is_bundle=true; fi
 			fi
 			[ -z "$dlurl" ] && return 1
-			echo >&2 "Got $dlurl"
+			echo >&2 "Got link: $dlurl"
 			resp=$(req "$dlurl" -)
+			pr "Get response from $dlurl" >&2
 		fi
 		url=$(echo "$resp" | $HTMLQ --base https://www.apkmirror.com --attribute href "a.btn") || return 1
+		pr "Requesting $url" >&2
 		url=$(req "$url" - | $HTMLQ --base https://www.apkmirror.com --attribute href "span > a[rel = nofollow]") || return 1
+		pr "Get response from $url" >&2
+
 	fi
 	
 	echo "Got download link: $url" >&2
@@ -344,6 +350,7 @@ dl_apkmirror() {
 	else
 		req "$url" "${output}"
 	fi
+	pr "Get response from $url" >&2
 }
 get_apkmirror_vers() {
 	local vers apkm_resp
