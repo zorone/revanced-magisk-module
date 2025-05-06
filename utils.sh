@@ -195,7 +195,7 @@ _req() {
 	if [ "$op" = - ]; then
 		echo >&2 "Request link: $ip"
 		curl -L -c "$TEMP_DIR/cookie.txt" -b "$TEMP_DIR/cookie.txt" --connect-timeout 5 --retry 0 --fail -s -S "$@" "$ip"
-		echo >&2 "Got link: $ip"
+		echo >&2 "Get Response: $ip"
 	else
 		if [ -f "$op" ]; then return; fi
 		local dlp
@@ -205,7 +205,7 @@ _req() {
 			return
 		fi
 		curl -L -c "$TEMP_DIR/cookie.txt" -b "$TEMP_DIR/cookie.txt" --connect-timeout 5 --retry 0 --fail -s -S "$@" "$ip" -o "$dlp" || return 1
-		echo >&2 "File $op is downloaded successfully."
+		pr >&2 "File $op is downloaded successfully."
 		mv -f "$dlp" "$op"
 	fi
 }
@@ -307,7 +307,7 @@ apk_mirror_search() {
 		if [ "$(sed -n 3p <<<"$app_table")" = "$apk_bundle" ] && [ "$(sed -n 6p <<<"$app_table")" = "$dpi" ] &&
 			isoneof "$(sed -n 4p <<<"$app_table")" "${apparch[@]}"; then
 			dlurl=$($HTMLQ --base https://www.apkmirror.com --attribute href "div:nth-child(1) > a:nth-child(1)" <<<"$node")
-			pr "Got link: $dlurl" >&2
+			pr "Get link: $dlurl" >&2
 			echo "$dlurl"
 			return 0
 		fi
@@ -332,26 +332,26 @@ dl_apkmirror() {
 					return 1
 				else is_bundle=true; fi
 			fi
+			pr "Get link: $dlurl" >&2
 			[ -z "$dlurl" ] && return 1
-			echo >&2 "Got link: $dlurl"
 			resp=$(req "$dlurl" -)
-			pr "Get response from $dlurl" >&2
+			echo >&2 "Get response from $dlurl"
 		fi
 		url=$(echo "$resp" | $HTMLQ --base https://www.apkmirror.com --attribute href "a.btn") || return 1
 		pr "Requesting $url" >&2
 		url=$(req "$url" - | $HTMLQ --base https://www.apkmirror.com --attribute href "span > a[rel = nofollow]") || return 1
-		pr "Get response from $url" >&2
+		echo >&2 "Exit crawling for file"
 
 	fi
 	
-	echo "Got download link: $url" >&2
+	pr "Get download link: $url" >&2
 	if [ "$is_bundle" = true ]; then
 		req "$url" "${output}.apkm"
 		merge_splits "${output}.apkm" "${output}"
 	else
 		req "$url" "${output}"
 	fi
-	pr "Get response from $url" >&2
+	echo "$url: Successfully get response" >&2
 }
 get_apkmirror_vers() {
 	local vers apkm_resp

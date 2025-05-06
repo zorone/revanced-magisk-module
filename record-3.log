@@ -1,0 +1,1004 @@
+cd /Welcome to Ubuntu 22.04.5 LTS (GNU/Linux 5.10.102.1-microsoft-standard-WSL2+ x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+This message is shown once a day. To disable it please create the
+/home/zorone/.hushlogin file.
+zorone@DESKTOP-8HV03R6:~$ cd /mnt/c/git/revanced-magisk-module/
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$ code .
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$ res=$(curl -L -c temp/cookie.txt -b temp/cookie.txt --connect-timeout 5 --retry 0 --fail -s -S -H "User-Agen
+t: Mozilla/5.0 (X11; Linux x86_64; rv:108.0) Gecko/20100101 Firefox/108.0" "https://www.apkmirror.com/apk/google-inc/youtube-music/you
+> ^C
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$ res=$(curl -L -c temp/cookie.txt -b temp/cookie.txt --connect-timeout 5 --retry 0 --fail -s -S -H "User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:108.0) Gecko/20100101 Firefox/108.0"
+ "https://www.apkmirror.com/apk/google-inc/youtube-music/youtube-music-8-12-53-release/");
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$ i=1; while tmp="$(echo $res | htmlq "div.table-row.headerFont:nth-last-child($i)" -r "span:nth-child($i)")"; arr["$i"]=$tmp; echo "$i: len = ${#tmp}"; i=`expr $i + 1`; [ ${#tmp} -gt 0 ]; do true; done
+1: len = 1697
+2: len = 1746
+3: len = 1622
+4: len = 1637
+5: len = 652
+6: len = 0
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$ for $arch in ("all"arm64-v8a" "armeabi-v7a"
+-bash: syntax error near unexpected token `('
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$ ls
+CONFIG.md  README.md  build-termux.sh  build.sh     ks.keystore     record.log       sig.txt
+LICENSE    bin        build.md         config.toml  playground.log  revanced-magisk  utils.sh
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$ ./build.sh
+[+] You are building locally. Magisk updates will not be enabled.
+[+] Getting prebuilts (anddea)
+Request link: https://api.github.com/repos/inotia00/revanced-cli/releases/latest
+Got link: https://api.github.com/repos/inotia00/revanced-cli/releases/latest
+[+] Getting 'temp/inotia00-rv/revanced-cli-5.0.1-all.jar' from 'https://api.github.com/repos/inotia00/revanced-cli/releases/assets/211880048'
+File temp/inotia00-rv/revanced-cli-5.0.1-all.jar is downloaded successfully.
+Request link: https://api.github.com/repos/anddea/revanced-patches/releases/latest
+Got link: https://api.github.com/repos/anddea/revanced-patches/releases/latest
+[+] Getting 'temp/anddea-rv/patches-3.7.0.rvp' from 'https://api.github.com/repos/anddea/revanced-patches/releases/assets/249102977'
+File temp/anddea-rv/patches-3.7.0.rvp is downloaded successfully.
+[+] Extracting temp/anddea-rv/patches-3.7.0.rvp
+
+Request link: https://apkmirror.com/apk/google-inc/youtube
+Got link: https://apkmirror.com/apk/google-inc/youtube
+[+] Choosing version '19.47.53' for Youtube-Extended-Abknc (arm64-v8a)
+[+] Downloading 'Youtube-Extended-Abknc (arm64-v8a)' from apkmirror
+Request link: mahttps://apkmirror.com/apk/google-inc/youtube/youtube-19-47-53-release
+curl: (1) Protocol "mahttps" not supported or disabled in libcurl
+Got link: mahttps://apkmirror.com/apk/google-inc/youtube/youtube-19-47-53-release
+[+] Get response from mahttps://apkmirror.com/apk/google-inc/youtube/youtube-19-47-53-release
+arm64-v8a: Node:
+[+] Requesting
+Request link:
+curl: (3) URL using bad/illegal format or missing URL
+Got link:
+[+] Get response from
+Got download link:
+curl: (3) URL using bad/illegal format or missing URL
+[+] Get response from
+Request link: https://apkmirror.com/apk/google-inc/youtube
+Got link: https://apkmirror.com/apk/google-inc/youtube
+[+] Choosing version '19.47.53' for Youtube-Extended-Abknc (arm-v7a)
+[+] Downloading 'Youtube-Extended-Abknc (arm-v7a)' from apkmirror
+Request link: mahttps://apkmirror.com/apk/google-inc/youtube/youtube-19-47-53-release
+curl: (1) Protocol "mahttps" not supported or disabled in libcurl
+Got link: mahttps://apkmirror.com/apk/google-inc/youtube/youtube-19-47-53-release
+[+] Get response from mahttps://apkmirror.com/apk/google-inc/youtube/youtube-19-47-53-release
+armeabi-v7a: Node:
+[+] Requesting
+Request link:
+curl: (3) URL using bad/illegal format or missing URL
+Got link:
+[+] Get response from
+Got download link:
+curl: (3) URL using bad/illegal format or missing URL
+[+] Get response from
+[-] ABORT: All builds failed.
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$ ./build.sh
+[+] You are building locally. Magisk updates will not be enabled.
+[+] Getting prebuilts (anddea)
+Request link: https://api.github.com/repos/inotia00/revanced-cli/releases/latest
+Got link: https://api.github.com/repos/inotia00/revanced-cli/releases/latest
+Request link: https://api.github.com/repos/anddea/revanced-patches/releases/latest
+Got link: https://api.github.com/repos/anddea/revanced-patches/releases/latest
+
+Request link: https://apkmirror.com/apk/google-inc/youtube
+Got link: https://apkmirror.com/apk/google-inc/youtube
+[+] Choosing version '19.47.53' for Youtube-Extended-Abknc (arm64-v8a)
+[+] Downloading 'Youtube-Extended-Abknc (arm64-v8a)' from apkmirror
+Request link: https://apkmirror.com/apk/google-inc/youtube/youtube-19-47-53-release
+Got link: https://apkmirror.com/apk/google-inc/youtube/youtube-19-47-53-release
+[+] Get response from https://apkmirror.com/apk/google-inc/youtube/youtube-19-47-53-release
+arm64-v8a: Node: <div class="table-row headerFont">
+                        <div class="table-cell rowheight addseparator expand pad dowrap-break-all">
+                            <a class="accent_color" href="/apk/google-inc/youtube/youtube-19-47-53-release/youtube-19-47-53-android-apk-download/">
+                                <svg class="icon tag-icon">
+                                    <use xlink:href="#apkm-icon-tag"></use>
+                                </svg>
+                                19.47.53                            </a>
+                            <span class="apkm-badge">APK</span>
+                                            <br>
+                            <br>
+                        </div>
+                        <div class="table-cell rowheight addseparator expand pad dowrap">universal</div>
+                        <div class="table-cell rowheight addseparator expand pad dowrap">Android 8.0+</div>
+                        <div class="table-cell rowheight addseparator expand pad dowrap">nodpi</div>
+                        <div class="table-cell rowheight addseparator expand pad dowrap">
+                            <a class="accent_color" data-google-interstitial="false" href="/apk/google-inc/youtube/youtube-19-47-53-release/youtube-19-47-53-android-apk-download/">
+                                <svg class="icon download-button-icon">
+                                    <use xlink:href="#apkm-icon-download"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+[+] Got link: https://www.apkmirror.com/apk/google-inc/youtube/youtube-19-47-53-release/youtube-19-47-53-android-apk-download/
+[-] ERROR: Could not download 'Youtube-Extended-Abknc (arm64-v8a)' from apkmirror with version '19.47.53', arch 'arm64-v8a', dpi 'nodpi'
+Request link: https://apkmirror.com/apk/google-inc/youtube
+Got link: https://apkmirror.com/apk/google-inc/youtube
+[+] Choosing version '19.47.53' for Youtube-Extended-Abknc (arm-v7a)
+[+] Downloading 'Youtube-Extended-Abknc (arm-v7a)' from apkmirror
+Request link: https://apkmirror.com/apk/google-inc/youtube/youtube-19-47-53-release
+Got link: https://apkmirror.com/apk/google-inc/youtube/youtube-19-47-53-release
+[+] Get response from https://apkmirror.com/apk/google-inc/youtube/youtube-19-47-53-release
+armeabi-v7a: Node: <div class="table-row headerFont">
+                        <div class="table-cell rowheight addseparator expand pad dowrap-break-all">
+                            <a class="accent_color" href="/apk/google-inc/youtube/youtube-19-47-53-release/youtube-19-47-53-android-apk-download/">
+                                <svg class="icon tag-icon">
+                                    <use xlink:href="#apkm-icon-tag"></use>
+                                </svg>
+                                19.47.53                            </a>
+                            <span class="apkm-badge">APK</span>
+                                            <br>
+                            <br>
+                        </div>
+                        <div class="table-cell rowheight addseparator expand pad dowrap">universal</div>
+                        <div class="table-cell rowheight addseparator expand pad dowrap">Android 8.0+</div>
+                        <div class="table-cell rowheight addseparator expand pad dowrap">nodpi</div>
+                        <div class="table-cell rowheight addseparator expand pad dowrap">
+                            <a class="accent_color" data-google-interstitial="false" href="/apk/google-inc/youtube/youtube-19-47-53-release/youtube-19-47-53-android-apk-download/">
+                                <svg class="icon download-button-icon">
+                                    <use xlink:href="#apkm-icon-download"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+[+] Got link: https://www.apkmirror.com/apk/google-inc/youtube/youtube-19-47-53-release/youtube-19-47-53-android-apk-download/
+[-] ERROR: Could not download 'Youtube-Extended-Abknc (arm-v7a)' from apkmirror with version '19.47.53', arch 'arm-v7a', dpi 'nodpi'
+[-] ABORT: All builds failed.
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$ time
+
+real    0m0.000s
+user    0m0.000s
+sys     0m0.000s
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$ date
+Tue May  6 10:58:04 +07 2025
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$
+
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$ date
+Tue May  6 10:58:39 +07 2025
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$ ./build.sh
+[+] You are building locally. Magisk updates will not be enabled.
+[+] Getting prebuilts (inotia00)
+Request link: https://api.github.com/repos/inotia00/revanced-cli/releases/latest
+Got link: https://api.github.com/repos/inotia00/revanced-cli/releases/latest
+Request link: https://api.github.com/repos/inotia00/revanced-patches/releases/latest
+Got link: https://api.github.com/repos/inotia00/revanced-patches/releases/latest
+[+] Getting 'temp/inotia00-rv/patches-5.6.2.rvp' from 'https://api.github.com/repos/inotia00/revanced-patches/releases/assets/243067174'
+File temp/inotia00-rv/patches-5.6.2.rvp is downloaded successfully.
+[+] Extracting temp/inotia00-rv/patches-5.6.2.rvp
+
+Request link: https://www.apkmirror.com/apk/google-inc/youtube-music
+Got link: https://www.apkmirror.com/apk/google-inc/youtube-music
+[+] Choosing version '8.05.51' for Music-Extended (arm64-v8a)
+[+] Downloading 'Music-Extended (arm64-v8a)' from apkmirror
+Request link: https://www.apkmirror.com/apk/google-inc/youtube-music/youtube-music-8-05-51-release
+Got link: https://www.apkmirror.com/apk/google-inc/youtube-music/youtube-music-8-05-51-release
+[+] Get response from https://www.apkmirror.com/apk/google-inc/youtube-music/youtube-music-8-05-51-release
+arm64-v8a: Node: <div class="table-row headerFont">
+                        <div class="table-cell rowheight addseparator expand pad dowrap-break-all">
+                            <a class="accent_color" href="/apk/google-inc/youtube-music/youtube-music-8-05-51-release/youtube-music-8-05-51-4-android-apk-download/">
+                                <svg class="icon tag-icon">
+                                    <use xlink:href="#apkm-icon-tag"></use>
+                                </svg>
+                                8.05.51                            </a>
+                            <span class="apkm-badge">APK</span>
+
+                                <br>
+                            <br>
+                        </div>
+                        <div class="table-cell rowheight addseparator expand pad dowrap">x86_64</div>
+                        <div class="table-cell rowheight addseparator expand pad dowrap">Android 8.0+</div>
+                        <div class="table-cell rowheight addseparator expand pad dowrap">nodpi</div>
+                        <div class="table-cell rowheight addseparator expand pad dowrap">
+                            <a class="accent_color" data-google-interstitial="false" href="/apk/google-inc/youtube-music/youtube-music-8-05-51-release/youtube-music-8-05-51-4-android-apk-download/">
+                                <svg class="icon download-button-icon">
+                                    <use xlink:href="#apkm-icon-download"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+[+] Got link: https://www.apkmirror.com/apk/google-inc/youtube-music/youtube-music-8-05-51-release/youtube-music-8-05-51-android-apk-download/
+Got link: https://www.apkmirror.com/apk/google-inc/youtube-music/youtube-music-8-05-51-release/youtube-music-8-05-51-android-apk-download/
+Request link: https://www.apkmirror.com/apk/google-inc/youtube-music/youtube-music-8-05-51-release/youtube-music-8-05-51-android-apk-download/
+Got link: https://www.apkmirror.com/apk/google-inc/youtube-music/youtube-music-8-05-51-release/youtube-music-8-05-51-android-apk-download/
+[+] Get response from https://www.apkmirror.com/apk/google-inc/youtube-music/youtube-music-8-05-51-release/youtube-music-8-05-51-android-apk-download/
+[+] Requesting https://www.apkmirror.com/apk/google-inc/youtube-music/youtube-music-8-05-51-release/youtube-music-8-05-51-android-apk-download/download/?key=a3d371d9ee280b90aa7c7aceb0794dd357352be9&forcebaseapk=true
+Request link: https://www.apkmirror.com/apk/google-inc/youtube-music/youtube-music-8-05-51-release/youtube-music-8-05-51-android-apk-download/download/?key=a3d371d9ee280b90aa7c7aceb0794dd357352be9&forcebaseapk=true
+Got link: https://www.apkmirror.com/apk/google-inc/youtube-music/youtube-music-8-05-51-release/youtube-music-8-05-51-android-apk-download/download/?key=a3d371d9ee280b90aa7c7aceb0794dd357352be9&forcebaseapk=true
+[+] Get response from https://www.apkmirror.com/wp-content/themes/APKMirror/download.php?id=8372612&key=180953938003a064dfc9441590fdf22bb3292e86&forcebaseapk=true
+Got download link: https://www.apkmirror.com/wp-content/themes/APKMirror/download.php?id=8372612&key=180953938003a064dfc9441590fdf22bb3292e86&forcebaseapk=true
+File temp/com.google.android.apps.youtube.music-8.05.51-arm64-v8a.apk is downloaded successfully.
+[+] Get response from https://www.apkmirror.com/wp-content/themes/APKMirror/download.php?id=8372612&key=180953938003a064dfc9441590fdf22bb3292e86&forcebaseapk=true
+[+] Building 'Music-Extended (arm64-v8a)' in 'apk' mode
+[+] env -u GITHUB_REPOSITORY java -jar temp/inotia00-rv/revanced-cli-5.0.1-all.jar patch temp/com.google.android.apps.youtube.music-8.05.51-arm64-v8a.apk --purge -o temp/music-revanced-extended-8.05.51-arm64-v8a-apk.apk -p temp/inotia00-rv/patches-5.6.2.rvp --keystore=ks.keystore --keystore-entry-password=123456789 --keystore-password=123456789 --signer=jhc --keystore-entry-alias=jhc -e "GmsCore support" --rip-lib x86_64 --rip-lib x86 --rip-lib armeabi-v7a
+INFO: Loading patches
+INFO: Decoding app manifest
+INFO: "Spoof Wi-Fi connection" disabled
+INFO: "Disable edge-to-edge display" disabled
+INFO: "Change version code" disabled
+INFO: "Custom header for YouTube Music" disabled
+INFO: "Hide overlay filter" disabled
+INFO: "Hide player overlay filter" disabled
+INFO: "Disable music video in album" disabled
+INFO: "Return YouTube Username" disabled
+INFO: Setting patch options
+INFO: Deleting existing temporary files directory
+INFO: Decoding resources
+INFO: Initializing lookup maps
+INFO: Executing patches
+INFO: "Bitrate default value" succeeded
+INFO: "Bypass image region restrictions" succeeded
+INFO: "Certificate spoof" succeeded
+INFO: "Change share sheet" succeeded
+INFO: "Change start page" succeeded
+INFO: "Custom branding icon for YouTube Music" succeeded
+INFO: "Custom branding name for YouTube Music" succeeded
+INFO: "Dark theme" succeeded
+INFO: "Disable Cairo splash animation" succeeded
+INFO: "Disable DRC audio" succeeded
+INFO: "Disable QUIC protocol" succeeded
+INFO: "Disable dislike redirection" succeeded
+INFO: "Disable forced auto captions" succeeded
+INFO: "Enable OPUS codec" succeeded
+INFO: "Enable debug logging" succeeded
+INFO: "Enable landscape mode" succeeded
+INFO: "Flyout menu components" succeeded
+INFO: "GmsCore support" succeeded
+INFO: "Hide account components" succeeded
+INFO: "Hide action bar components" succeeded
+INFO: "Hide ads" succeeded
+INFO: "Hide layout components" succeeded
+INFO: "Navigation bar components" succeeded
+INFO: "Player components" succeeded
+INFO: "Remove background playback restrictions" succeeded
+INFO: "Remove viewer discretion dialog" succeeded
+INFO: "Restore old style library shelf" succeeded
+INFO: "Return YouTube Dislike" succeeded
+INFO: "Sanitize sharing links" succeeded
+INFO: "SponsorBlock" succeeded
+INFO: "Spoof app version" succeeded
+INFO: "Spoof player parameter" succeeded
+INFO: "Translations for YouTube Music" succeeded
+INFO: "Video playback" succeeded
+INFO: "Watch history" succeeded
+INFO: "Visual preferences icons for YouTube Music" succeeded
+INFO: "Settings for YouTube Music" succeeded
+INFO: Compiling modified resources
+INFO: Ripping selected native libs
+INFO: Aligning APK
+INFO: Signing APK
+INFO: Saved to /mnt/e/shared/c/git/revanced-magisk-module/temp/music-revanced-extended-8.05.51-arm64-v8a-apk.apk
+INFO: Purging temporary files
+INFO: Purged resource cache directory
+[+] Built Music-Extended (arm64-v8a) (non-root): 'build/music-revanced-extended-v8.05.51-arm64-v8a.apk'
+[+] Building 'Music-Extended (arm64-v8a)' in 'module' mode
+[+] env -u GITHUB_REPOSITORY java -jar temp/inotia00-rv/revanced-cli-5.0.1-all.jar patch temp/com.google.android.apps.youtube.music-8.05.51-arm64-v8a.apk --purge -o temp/music-revanced-extended-8.05.51-arm64-v8a-module.apk -p temp/inotia00-rv/patches-5.6.2.rvp --keystore=ks.keystore --keystore-entry-password=123456789 --keystore-password=123456789 --signer=jhc --keystore-entry-alias=jhc -d "GmsCore support" --rip-lib x86_64 --rip-lib x86 --rip-lib arm64-v8a --rip-lib armeabi-v7a --unsigned
+INFO: Loading patches
+INFO: Decoding app manifest
+INFO: "Spoof Wi-Fi connection" disabled
+INFO: "Disable edge-to-edge display" disabled
+INFO: "Change version code" disabled
+INFO: "Custom header for YouTube Music" disabled
+INFO: "Hide overlay filter" disabled
+INFO: "Hide player overlay filter" disabled
+INFO: "Disable music video in album" disabled
+INFO: "GmsCore support" disabled manually
+INFO: "Return YouTube Username" disabled
+INFO: "GmsCore support" disabled manually
+INFO: Setting patch options
+INFO: Deleting existing temporary files directory
+INFO: Decoding resources
+INFO: Initializing lookup maps
+INFO: Executing patches
+INFO: "Bitrate default value" succeeded
+INFO: "Bypass image region restrictions" succeeded
+INFO: "Certificate spoof" succeeded
+INFO: "Change share sheet" succeeded
+INFO: "Change start page" succeeded
+INFO: "Custom branding icon for YouTube Music" succeeded
+INFO: "Custom branding name for YouTube Music" succeeded
+INFO: "Dark theme" succeeded
+INFO: "Disable Cairo splash animation" succeeded
+INFO: "Disable DRC audio" succeeded
+INFO: "Disable QUIC protocol" succeeded
+INFO: "Disable dislike redirection" succeeded
+INFO: "Disable forced auto captions" succeeded
+INFO: "Enable OPUS codec" succeeded
+INFO: "Enable debug logging" succeeded
+INFO: "Enable landscape mode" succeeded
+INFO: "Flyout menu components" succeeded
+INFO: "Hide account components" succeeded
+INFO: "Hide action bar components" succeeded
+INFO: "Hide ads" succeeded
+INFO: "Hide layout components" succeeded
+INFO: "Navigation bar components" succeeded
+INFO: "Player components" succeeded
+INFO: "Remove background playback restrictions" succeeded
+INFO: "Remove viewer discretion dialog" succeeded
+INFO: "Restore old style library shelf" succeeded
+INFO: "Return YouTube Dislike" succeeded
+INFO: "Sanitize sharing links" succeeded
+INFO: "SponsorBlock" succeeded
+INFO: "Spoof app version" succeeded
+INFO: "Spoof player parameter" succeeded
+INFO: "Translations for YouTube Music" succeeded
+INFO: "Video playback" succeeded
+INFO: "Watch history" succeeded
+INFO: "Visual preferences icons for YouTube Music" succeeded
+INFO: "Settings for YouTube Music" succeeded
+INFO: Compiling modified resources
+INFO: Ripping selected native libs
+INFO: Aligning APK
+INFO: Saved to /mnt/e/shared/c/git/revanced-magisk-module/temp/music-revanced-extended-8.05.51-arm64-v8a-module.apk
+INFO: Purging temporary files
+INFO: Purged resource cache directory
+[+] Packing module Music-Extended (arm64-v8a)
+[+] Built Music-Extended (arm64-v8a) (root): 'build/music-revanced-extended-magisk-v8.05.51-arm64-v8a.zip'
+Request link: https://www.apkmirror.com/apk/google-inc/youtube-music
+Got link: https://www.apkmirror.com/apk/google-inc/youtube-music
+[+] Choosing version '8.05.51' for Music-Extended (arm-v7a)
+[+] Downloading 'Music-Extended (arm-v7a)' from apkmirror
+Request link: https://www.apkmirror.com/apk/google-inc/youtube-music/youtube-music-8-05-51-release
+Got link: https://www.apkmirror.com/apk/google-inc/youtube-music/youtube-music-8-05-51-release
+[+] Get response from https://www.apkmirror.com/apk/google-inc/youtube-music/youtube-music-8-05-51-release
+armeabi-v7a: Node: <div class="table-row headerFont">
+                        <div class="table-cell rowheight addseparator expand pad dowrap-break-all">
+                            <a class="accent_color" href="/apk/google-inc/youtube-music/youtube-music-8-05-51-release/youtube-music-8-05-51-4-android-apk-download/">
+                                <svg class="icon tag-icon">
+                                    <use xlink:href="#apkm-icon-tag"></use>
+                                </svg>
+                                8.05.51                            </a>
+                            <span class="apkm-badge">APK</span>
+
+                                <br>
+                            <br>
+                        </div>
+                        <div class="table-cell rowheight addseparator expand pad dowrap">x86_64</div>
+                        <div class="table-cell rowheight addseparator expand pad dowrap">Android 8.0+</div>
+                        <div class="table-cell rowheight addseparator expand pad dowrap">nodpi</div>
+                        <div class="table-cell rowheight addseparator expand pad dowrap">
+                            <a class="accent_color" data-google-interstitial="false" href="/apk/google-inc/youtube-music/youtube-music-8-05-51-release/youtube-music-8-05-51-4-android-apk-download/">
+                                <svg class="icon download-button-icon">
+                                    <use xlink:href="#apkm-icon-download"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+[+] Got link: https://www.apkmirror.com/apk/google-inc/youtube-music/youtube-music-8-05-51-release/youtube-music-8-05-51-2-android-apk-download/
+Got link: https://www.apkmirror.com/apk/google-inc/youtube-music/youtube-music-8-05-51-release/youtube-music-8-05-51-2-android-apk-download/
+Request link: https://www.apkmirror.com/apk/google-inc/youtube-music/youtube-music-8-05-51-release/youtube-music-8-05-51-2-android-apk-download/
+Got link: https://www.apkmirror.com/apk/google-inc/youtube-music/youtube-music-8-05-51-release/youtube-music-8-05-51-2-android-apk-download/
+[+] Get response from https://www.apkmirror.com/apk/google-inc/youtube-music/youtube-music-8-05-51-release/youtube-music-8-05-51-2-android-apk-download/
+[+] Requesting https://www.apkmirror.com/apk/google-inc/youtube-music/youtube-music-8-05-51-release/youtube-music-8-05-51-2-android-apk-download/download/?key=14deddf6672c136eaa5240c3fd447b6582b2ab0c&forcebaseapk=true
+Request link: https://www.apkmirror.com/apk/google-inc/youtube-music/youtube-music-8-05-51-release/youtube-music-8-05-51-2-android-apk-download/download/?key=14deddf6672c136eaa5240c3fd447b6582b2ab0c&forcebaseapk=true
+Got link: https://www.apkmirror.com/apk/google-inc/youtube-music/youtube-music-8-05-51-release/youtube-music-8-05-51-2-android-apk-download/download/?key=14deddf6672c136eaa5240c3fd447b6582b2ab0c&forcebaseapk=true
+[+] Get response from https://www.apkmirror.com/wp-content/themes/APKMirror/download.php?id=8373053&key=23bc033a1e2f2594b6524a2f66d74e215448564b&forcebaseapk=true
+Got download link: https://www.apkmirror.com/wp-content/themes/APKMirror/download.php?id=8373053&key=23bc033a1e2f2594b6524a2f66d74e215448564b&forcebaseapk=true
+File temp/com.google.android.apps.youtube.music-8.05.51-arm-v7a.apk is downloaded successfully.
+[+] Get response from https://www.apkmirror.com/wp-content/themes/APKMirror/download.php?id=8373053&key=23bc033a1e2f2594b6524a2f66d74e215448564b&forcebaseapk=true
+[+] Building 'Music-Extended (arm-v7a)' in 'apk' mode
+[+] env -u GITHUB_REPOSITORY java -jar temp/inotia00-rv/revanced-cli-5.0.1-all.jar patch temp/com.google.android.apps.youtube.music-8.05.51-arm-v7a.apk --purge -o temp/music-revanced-extended-8.05.51-arm-v7a-apk.apk -p temp/inotia00-rv/patches-5.6.2.rvp --keystore=ks.keystore --keystore-entry-password=123456789 --keystore-password=123456789 --signer=jhc --keystore-entry-alias=jhc -e "GmsCore support" --rip-lib x86_64 --rip-lib x86 --rip-lib arm64-v8a
+INFO: Loading patches
+INFO: Decoding app manifest
+INFO: "Spoof Wi-Fi connection" disabled
+INFO: "Disable edge-to-edge display" disabled
+INFO: "Change version code" disabled
+INFO: "Custom header for YouTube Music" disabled
+INFO: "Hide overlay filter" disabled
+INFO: "Hide player overlay filter" disabled
+INFO: "Disable music video in album" disabled
+INFO: "Return YouTube Username" disabled
+INFO: Setting patch options
+INFO: Deleting existing temporary files directory
+INFO: Decoding resources
+INFO: Initializing lookup maps
+INFO: Executing patches
+INFO: "Bitrate default value" succeeded
+INFO: "Bypass image region restrictions" succeeded
+INFO: "Certificate spoof" succeeded
+INFO: "Change share sheet" succeeded
+INFO: "Change start page" succeeded
+INFO: "Custom branding icon for YouTube Music" succeeded
+INFO: "Custom branding name for YouTube Music" succeeded
+INFO: "Dark theme" succeeded
+INFO: "Disable Cairo splash animation" succeeded
+INFO: "Disable DRC audio" succeeded
+INFO: "Disable QUIC protocol" succeeded
+INFO: "Disable dislike redirection" succeeded
+INFO: "Disable forced auto captions" succeeded
+INFO: "Enable OPUS codec" succeeded
+INFO: "Enable debug logging" succeeded
+INFO: "Enable landscape mode" succeeded
+INFO: "Flyout menu components" succeeded
+INFO: "GmsCore support" succeeded
+INFO: "Hide account components" succeeded
+INFO: "Hide action bar components" succeeded
+INFO: "Hide ads" succeeded
+INFO: "Hide layout components" succeeded
+INFO: "Navigation bar components" succeeded
+INFO: "Player components" succeeded
+INFO: "Remove background playback restrictions" succeeded
+INFO: "Remove viewer discretion dialog" succeeded
+INFO: "Restore old style library shelf" succeeded
+INFO: "Return YouTube Dislike" succeeded
+INFO: "Sanitize sharing links" succeeded
+INFO: "SponsorBlock" succeeded
+INFO: "Spoof app version" succeeded
+INFO: "Spoof player parameter" succeeded
+INFO: "Translations for YouTube Music" succeeded
+INFO: "Video playback" succeeded
+INFO: "Watch history" succeeded
+INFO: "Visual preferences icons for YouTube Music" succeeded
+INFO: "Settings for YouTube Music" succeeded
+INFO: Compiling modified resources
+INFO: Ripping selected native libs
+INFO: Aligning APK
+INFO: Signing APK
+INFO: Saved to /mnt/e/shared/c/git/revanced-magisk-module/temp/music-revanced-extended-8.05.51-arm-v7a-apk.apk
+INFO: Purging temporary files
+INFO: Purged resource cache directory
+[+] Built Music-Extended (arm-v7a) (non-root): 'build/music-revanced-extended-v8.05.51-arm-v7a.apk'
+[+] Building 'Music-Extended (arm-v7a)' in 'module' mode
+[+] env -u GITHUB_REPOSITORY java -jar temp/inotia00-rv/revanced-cli-5.0.1-all.jar patch temp/com.google.android.apps.youtube.music-8.05.51-arm-v7a.apk --purge -o temp/music-revanced-extended-8.05.51-arm-v7a-module.apk -p temp/inotia00-rv/patches-5.6.2.rvp --keystore=ks.keystore --keystore-entry-password=123456789 --keystore-password=123456789 --signer=jhc --keystore-entry-alias=jhc -d "GmsCore support" --rip-lib x86_64 --rip-lib x86 --rip-lib arm64-v8a --rip-lib armeabi-v7a --unsigned
+INFO: Loading patches
+INFO: Decoding app manifest
+INFO: "Spoof Wi-Fi connection" disabled
+INFO: "Disable edge-to-edge display" disabled
+INFO: "Change version code" disabled
+INFO: "Custom header for YouTube Music" disabled
+INFO: "Hide overlay filter" disabled
+INFO: "Hide player overlay filter" disabled
+INFO: "Disable music video in album" disabled
+INFO: "GmsCore support" disabled manually
+INFO: "Return YouTube Username" disabled
+INFO: "GmsCore support" disabled manually
+INFO: Setting patch options
+INFO: Deleting existing temporary files directory
+INFO: Decoding resources
+INFO: Initializing lookup maps
+INFO: Executing patches
+INFO: "Bitrate default value" succeeded
+INFO: "Bypass image region restrictions" succeeded
+INFO: "Certificate spoof" succeeded
+INFO: "Change share sheet" succeeded
+INFO: "Change start page" succeeded
+INFO: "Custom branding icon for YouTube Music" succeeded
+INFO: "Custom branding name for YouTube Music" succeeded
+INFO: "Dark theme" succeeded
+INFO: "Disable Cairo splash animation" succeeded
+INFO: "Disable DRC audio" succeeded
+INFO: "Disable QUIC protocol" succeeded
+INFO: "Disable dislike redirection" succeeded
+INFO: "Disable forced auto captions" succeeded
+INFO: "Enable OPUS codec" succeeded
+INFO: "Enable debug logging" succeeded
+INFO: "Enable landscape mode" succeeded
+INFO: "Flyout menu components" succeeded
+INFO: "Hide account components" succeeded
+INFO: "Hide action bar components" succeeded
+INFO: "Hide ads" succeeded
+INFO: "Hide layout components" succeeded
+INFO: "Navigation bar components" succeeded
+INFO: "Player components" succeeded
+INFO: "Remove background playback restrictions" succeeded
+INFO: "Remove viewer discretion dialog" succeeded
+INFO: "Restore old style library shelf" succeeded
+INFO: "Return YouTube Dislike" succeeded
+INFO: "Sanitize sharing links" succeeded
+INFO: "SponsorBlock" succeeded
+INFO: "Spoof app version" succeeded
+INFO: "Spoof player parameter" succeeded
+INFO: "Translations for YouTube Music" succeeded
+INFO: "Video playback" succeeded
+INFO: "Watch history" succeeded
+INFO: "Visual preferences icons for YouTube Music" succeeded
+INFO: "Settings for YouTube Music" succeeded
+INFO: Compiling modified resources
+INFO: Ripping selected native libs
+INFO: Aligning APK
+INFO: Saved to /mnt/e/shared/c/git/revanced-magisk-module/temp/music-revanced-extended-8.05.51-arm-v7a-module.apk
+INFO: Purging temporary files
+INFO: Purged resource cache directory
+[+] Packing module Music-Extended (arm-v7a)
+[+] Built Music-Extended (arm-v7a) (root): 'build/music-revanced-extended-magisk-v8.05.51-arm-v7a.zip'
+[+] Getting prebuilts (anddea)
+Request link: https://api.github.com/repos/inotia00/revanced-cli/releases/latest
+Got link: https://api.github.com/repos/inotia00/revanced-cli/releases/latest
+Request link: https://api.github.com/repos/anddea/revanced-patches/releases/latest
+Got link: https://api.github.com/repos/anddea/revanced-patches/releases/latest
+
+Request link: https://www.apkmirror.com/apk/google-inc/youtube-music
+Got link: https://www.apkmirror.com/apk/google-inc/youtube-music
+[+] Choosing version '8.12.53' for Music-Extended-Abknc
+[+] Downloading 'Music-Extended-Abknc' from apkmirror
+Request link: https://www.apkmirror.com/apk/google-inc/youtube-music/youtube-music-8-12-53-release
+Got link: https://www.apkmirror.com/apk/google-inc/youtube-music/youtube-music-8-12-53-release
+[+] Get response from https://www.apkmirror.com/apk/google-inc/youtube-music/youtube-music-8-12-53-release
+all: Node: <div class="table-row headerFont">
+                        <div class="table-cell rowheight addseparator expand pad dowrap-break-all">
+                            <a class="accent_color" href="/apk/google-inc/youtube-music/youtube-music-8-12-53-release/youtube-music-8-12-53-3-android-apk-download/">
+                                <svg class="icon tag-icon">
+                                    <use xlink:href="#apkm-icon-tag"></use>
+                                </svg>
+                                8.12.53                            </a>
+                            <span class="apkm-badge">APK</span>
+
+                                <br>
+                            <br>
+                        </div>
+                        <div class="table-cell rowheight addseparator expand pad dowrap">x86_64</div>
+                        <div class="table-cell rowheight addseparator expand pad dowrap">Android 8.0+</div>
+                        <div class="table-cell rowheight addseparator expand pad dowrap">nodpi</div>
+                        <div class="table-cell rowheight addseparator expand pad dowrap">
+                            <a class="accent_color" data-google-interstitial="false" href="/apk/google-inc/youtube-music/youtube-music-8-12-53-release/youtube-music-8-12-53-3-android-apk-download/">
+                                <svg class="icon download-button-icon">
+                                    <use xlink:href="#apkm-icon-download"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+[-] ERROR: Could not download 'Music-Extended-Abknc' from apkmirror with version '8.12.53', arch 'all', dpi 'nodpi'
+[+] Getting prebuilts (anddea)
+Request link: https://api.github.com/repos/inotia00/revanced-cli/releases/latest
+Got link: https://api.github.com/repos/inotia00/revanced-cli/releases/latest
+Request link: https://api.github.com/repos/anddea/revanced-patches/releases/latest
+Got link: https://api.github.com/repos/anddea/revanced-patches/releases/latest
+
+Request link: https://apkmirror.com/apk/google-inc/youtube
+Got link: https://apkmirror.com/apk/google-inc/youtube
+[+] Choosing version '19.47.53' for Youtube-Extended-Abknc (arm64-v8a)
+[+] Downloading 'Youtube-Extended-Abknc (arm64-v8a)' from apkmirror
+Request link: https://apkmirror.com/apk/google-inc/youtube/youtube-19-47-53-release
+Got link: https://apkmirror.com/apk/google-inc/youtube/youtube-19-47-53-release
+[+] Get response from https://apkmirror.com/apk/google-inc/youtube/youtube-19-47-53-release
+arm64-v8a: Node: <div class="table-row headerFont">
+                        <div class="table-cell rowheight addseparator expand pad dowrap-break-all">
+                            <a class="accent_color" href="/apk/google-inc/youtube/youtube-19-47-53-release/youtube-19-47-53-android-apk-download/">
+                                <svg class="icon tag-icon">
+                                    <use xlink:href="#apkm-icon-tag"></use>
+                                </svg>
+                                19.47.53                            </a>
+                            <span class="apkm-badge">APK</span>
+                                            <br>
+                            <br>
+                        </div>
+                        <div class="table-cell rowheight addseparator expand pad dowrap">universal</div>
+                        <div class="table-cell rowheight addseparator expand pad dowrap">Android 8.0+</div>
+                        <div class="table-cell rowheight addseparator expand pad dowrap">nodpi</div>
+                        <div class="table-cell rowheight addseparator expand pad dowrap">
+                            <a class="accent_color" data-google-interstitial="false" href="/apk/google-inc/youtube/youtube-19-47-53-release/youtube-19-47-53-android-apk-download/">
+                                <svg class="icon download-button-icon">
+                                    <use xlink:href="#apkm-icon-download"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+[+] Got link: https://www.apkmirror.com/apk/google-inc/youtube/youtube-19-47-53-release/youtube-19-47-53-android-apk-download/
+Got link: https://www.apkmirror.com/apk/google-inc/youtube/youtube-19-47-53-release/youtube-19-47-53-android-apk-download/
+Request link: https://www.apkmirror.com/apk/google-inc/youtube/youtube-19-47-53-release/youtube-19-47-53-android-apk-download/
+Got link: https://www.apkmirror.com/apk/google-inc/youtube/youtube-19-47-53-release/youtube-19-47-53-android-apk-download/
+[+] Get response from https://www.apkmirror.com/apk/google-inc/youtube/youtube-19-47-53-release/youtube-19-47-53-android-apk-download/
+[+] Requesting https://www.apkmirror.com/apk/google-inc/youtube/youtube-19-47-53-release/youtube-19-47-53-android-apk-download/download/?key=d180fb9f84701e7cd773e89ccb884ab6ce46f8f7&forcebaseapk=true
+Request link: https://www.apkmirror.com/apk/google-inc/youtube/youtube-19-47-53-release/youtube-19-47-53-android-apk-download/download/?key=d180fb9f84701e7cd773e89ccb884ab6ce46f8f7&forcebaseapk=true
+Got link: https://www.apkmirror.com/apk/google-inc/youtube/youtube-19-47-53-release/youtube-19-47-53-android-apk-download/download/?key=d180fb9f84701e7cd773e89ccb884ab6ce46f8f7&forcebaseapk=true
+[+] Get response from https://www.apkmirror.com/wp-content/themes/APKMirror/download.php?id=7844900&key=1efd357432fdc9731821e8a9d65a48b93a56ce2d&forcebaseapk=true
+Got download link: https://www.apkmirror.com/wp-content/themes/APKMirror/download.php?id=7844900&key=1efd357432fdc9731821e8a9d65a48b93a56ce2d&forcebaseapk=true
+File temp/com.google.android.youtube-19.47.53-arm64-v8a.apk is downloaded successfully.
+[+] Get response from https://www.apkmirror.com/wp-content/themes/APKMirror/download.php?id=7844900&key=1efd357432fdc9731821e8a9d65a48b93a56ce2d&forcebaseapk=true
+[+] Building 'Youtube-Extended-Abknc (arm64-v8a)' in 'apk' mode
+[+] env -u GITHUB_REPOSITORY java -jar temp/inotia00-rv/revanced-cli-5.0.1-all.jar patch temp/com.google.android.youtube-19.47.53-arm64-v8a.apk --purge -o temp/rvx-youtube-revanced-extended-19.47.53-arm64-v8a-apk.apk -p temp/anddea-rv/patches-3.7.0.rvp --keystore=ks.keystore --keystore-entry-password=123456789 --keystore-password=123456789 --signer=jhc --keystore-entry-alias=jhc -d "Disable splash animation" -d "Enable debug logging" -e "Custom branding icon for YouTube" -e "Custom branding name for YouTube" -e "Hide Shorts dimming" -e "Hide shortcuts" -e "MaterialYou" -e "Change Version Code" -OiconType="Cairo" -OappIcon="mmt" -OdoubleTapLengthArrays="3, 5, 10, 15, 20, 30, 60, 120, 180" -OBackgroundColor="@android:color/transparent" -OpackageNameYouTube="rvx.android.youtube" -OiconType="rounded" -OchangeTopButtons=true -OchangeVersionCode=true -OsettingsLabel="eXtended" -OinsertPosition="@string/about_key" -OcornerRadius="4.0dip" -OdarkThemeBackgroundColor="?ytBaseBackground" -OlightThemeBackgroundColor="?ytBaseBackground" -OstrokeColor="?attr/ytChipBackground" -OdarkThemeBackgroundColor="@android:color/black" -OlightThemeBackgroundColor="@android:color/white" -OsettingsMenuIcon="yt_alt" -e "GmsCore support" --rip-lib x86_64 --rip-lib x86 --rip-lib armeabi-v7a
+INFO: Loading patches
+INFO: Decoding app manifest
+INFO: "Spoof Wi-Fi connection" disabled
+INFO: "Disable edge-to-edge display" disabled
+INFO: "Change version code" disabled
+INFO: "Enable debug logging" disabled manually
+INFO: "Custom branding name for Spotify" disabled
+INFO: "Disable splash animation" disabled manually
+INFO: "Custom header for YouTube" disabled
+INFO: "Enable debug logging" disabled manually
+INFO: Setting patch options
+INFO: Deleting existing temporary files directory
+INFO: Decoding resources
+INFO: Initializing lookup maps
+INFO: Executing patches
+INFO: "Alternative thumbnails" succeeded
+INFO: "Ambient mode control" succeeded
+INFO: "Bypass URL redirects" succeeded
+INFO: "Bypass image region restrictions" succeeded
+INFO: "Change form factor" succeeded
+INFO: "Change live ring click action" succeeded
+INFO: "Change player flyout menu toggles" succeeded
+INFO: "Change share sheet" succeeded
+INFO: "Change start page" succeeded
+INFO: "Custom Shorts action buttons" succeeded
+WARNING: "Change splash icons" is not supported in this version. Use YouTube 19.16.39 or earlier.
+WARNING: Splash animation is not available for "xisr_special".
+INFO: "Custom branding icon for YouTube" succeeded
+INFO: "Custom branding name for YouTube" succeeded
+INFO: "Custom double tap length" succeeded
+INFO: "Description components" succeeded
+INFO: "Disable QUIC protocol" succeeded
+INFO: "Disable forced auto audio tracks" succeeded
+INFO: "Disable forced auto captions" succeeded
+INFO: "Disable haptic feedback" succeeded
+INFO: "Disable layout updates" succeeded
+INFO: "Disable resuming Miniplayer on startup" succeeded
+INFO: "Disable resuming Shorts on startup" succeeded
+INFO: "Enable OPUS codec" succeeded
+INFO: "Enable gradient loading screen" succeeded
+INFO: "Force player buttons background" succeeded
+INFO: "Fullscreen components" succeeded
+INFO: "GmsCore support" succeeded
+INFO: "Hide Shorts dimming" succeeded
+INFO: "Hide accessibility controls dialog" succeeded
+INFO: "Hide action buttons" succeeded
+INFO: "Hide ads" succeeded
+INFO: "Hide comments components" succeeded
+INFO: "Hide feed components" succeeded
+INFO: "Hide feed flyout menu" succeeded
+INFO: "Hide layout components" succeeded
+INFO: "Hide player buttons" succeeded
+INFO: "Hide player flyout menu" succeeded
+INFO: "Hide shortcuts" succeeded
+INFO: "Hook download actions" succeeded
+INFO: "MaterialYou" succeeded
+INFO: "Miniplayer" succeeded
+INFO: "Navigation bar components" succeeded
+INFO: "Open links externally" succeeded
+INFO: "Overlay buttons" succeeded
+INFO: "Player components" succeeded
+INFO: "Remove background playback restrictions" succeeded
+INFO: "Remove viewer discretion dialog" succeeded
+INFO: "Return YouTube Dislike" succeeded
+INFO: "Return YouTube Username" succeeded
+INFO: "Sanitize sharing links" succeeded
+WARNING: "Restore old seekbar thumbnails" is not supported in this version. Use YouTube 19.16.39 or earlier.
+INFO: "Seekbar components" succeeded
+INFO: "Shorts components" succeeded
+INFO: "Snack bar components" succeeded
+INFO: "SponsorBlock" succeeded
+INFO: "Spoof app version" succeeded
+INFO: "Spoof streaming data" succeeded
+INFO: "Spoof watch history" succeeded
+INFO: "Swipe controls" succeeded
+INFO: "Theme" succeeded
+INFO: "Toolbar components" succeeded
+INFO: "Translations for YouTube" succeeded
+INFO: "Video playback" succeeded
+INFO: "Visual preferences icons for YouTube" succeeded
+INFO: "Hook YouTube Music actions" succeeded
+INFO: "Settings for YouTube" succeeded
+INFO: Compiling modified resources
+INFO: Ripping selected native libs
+INFO: Aligning APK
+INFO: Signing APK
+INFO: Saved to /mnt/e/shared/c/git/revanced-magisk-module/temp/rvx-youtube-revanced-extended-19.47.53-arm64-v8a-apk.apk
+INFO: Purging temporary files
+INFO: Purged resource cache directory
+[+] Built Youtube-Extended-Abknc (arm64-v8a) (non-root): 'build/rvx-youtube-revanced-extended-v19.47.53-arm64-v8a.apk'
+[+] Building 'Youtube-Extended-Abknc (arm64-v8a)' in 'module' mode
+[+] env -u GITHUB_REPOSITORY java -jar temp/inotia00-rv/revanced-cli-5.0.1-all.jar patch temp/com.google.android.youtube-19.47.53-arm64-v8a.apk --purge -o temp/rvx-youtube-revanced-extended-19.47.53-arm64-v8a-module.apk -p temp/anddea-rv/patches-3.7.0.rvp --keystore=ks.keystore --keystore-entry-password=123456789 --keystore-password=123456789 --signer=jhc --keystore-entry-alias=jhc -d "Disable splash animation" -d "Enable debug logging" -e "Custom branding icon for YouTube" -e "Custom branding name for YouTube" -e "Hide Shorts dimming" -e "Hide shortcuts" -e "MaterialYou" -e "Change Version Code" -OiconType="Cairo" -OappIcon="mmt" -OdoubleTapLengthArrays="3, 5, 10, 15, 20, 30, 60, 120, 180" -OBackgroundColor="@android:color/transparent" -OpackageNameYouTube="rvx.android.youtube" -OiconType="rounded" -OchangeTopButtons=true -OchangeVersionCode=true -OsettingsLabel="eXtended" -OinsertPosition="@string/about_key" -OcornerRadius="4.0dip" -OdarkThemeBackgroundColor="?ytBaseBackground" -OlightThemeBackgroundColor="?ytBaseBackground" -OstrokeColor="?attr/ytChipBackground" -OdarkThemeBackgroundColor="@android:color/black" -OlightThemeBackgroundColor="@android:color/white" -OsettingsMenuIcon="yt_alt" -d "GmsCore support" --rip-lib x86_64 --rip-lib x86 --rip-lib arm64-v8a --rip-lib armeabi-v7a --unsigned
+INFO: Loading patches
+INFO: Decoding app manifest
+INFO: "Spoof Wi-Fi connection" disabled
+INFO: "Disable edge-to-edge display" disabled
+INFO: "Change version code" disabled
+INFO: "Enable debug logging" disabled manually
+INFO: "GmsCore support" disabled manually
+INFO: "Custom branding name for Spotify" disabled
+INFO: "Disable splash animation" disabled manually
+INFO: "Custom header for YouTube" disabled
+INFO: "Enable debug logging" disabled manually
+INFO: "GmsCore support" disabled manually
+INFO: Setting patch options
+INFO: Deleting existing temporary files directory
+INFO: Decoding resources
+INFO: Initializing lookup maps
+INFO: Executing patches
+INFO: "Alternative thumbnails" succeeded
+INFO: "Ambient mode control" succeeded
+INFO: "Bypass URL redirects" succeeded
+INFO: "Bypass image region restrictions" succeeded
+INFO: "Change form factor" succeeded
+INFO: "Change live ring click action" succeeded
+INFO: "Change player flyout menu toggles" succeeded
+INFO: "Change share sheet" succeeded
+INFO: "Change start page" succeeded
+INFO: "Custom Shorts action buttons" succeeded
+WARNING: "Change splash icons" is not supported in this version. Use YouTube 19.16.39 or earlier.
+WARNING: Splash animation is not available for "xisr_special".
+INFO: "Custom branding icon for YouTube" succeeded
+INFO: "Custom branding name for YouTube" succeeded
+INFO: "Custom double tap length" succeeded
+INFO: "Description components" succeeded
+INFO: "Disable QUIC protocol" succeeded
+INFO: "Disable forced auto audio tracks" succeeded
+INFO: "Disable forced auto captions" succeeded
+INFO: "Disable haptic feedback" succeeded
+INFO: "Disable layout updates" succeeded
+INFO: "Disable resuming Miniplayer on startup" succeeded
+INFO: "Disable resuming Shorts on startup" succeeded
+INFO: "Enable OPUS codec" succeeded
+INFO: "Enable gradient loading screen" succeeded
+INFO: "Force player buttons background" succeeded
+INFO: "Fullscreen components" succeeded
+INFO: "Hide Shorts dimming" succeeded
+INFO: "Hide accessibility controls dialog" succeeded
+INFO: "Hide action buttons" succeeded
+INFO: "Hide ads" succeeded
+INFO: "Hide comments components" succeeded
+INFO: "Hide feed components" succeeded
+INFO: "Hide feed flyout menu" succeeded
+INFO: "Hide layout components" succeeded
+INFO: "Hide player buttons" succeeded
+INFO: "Hide player flyout menu" succeeded
+INFO: "Hide shortcuts" succeeded
+INFO: "Hook download actions" succeeded
+INFO: "MaterialYou" succeeded
+INFO: "Miniplayer" succeeded
+INFO: "Navigation bar components" succeeded
+INFO: "Open links externally" succeeded
+INFO: "Overlay buttons" succeeded
+INFO: "Player components" succeeded
+INFO: "Remove background playback restrictions" succeeded
+INFO: "Remove viewer discretion dialog" succeeded
+INFO: "Return YouTube Dislike" succeeded
+INFO: "Return YouTube Username" succeeded
+INFO: "Sanitize sharing links" succeeded
+WARNING: "Restore old seekbar thumbnails" is not supported in this version. Use YouTube 19.16.39 or earlier.
+INFO: "Seekbar components" succeeded
+INFO: "Shorts components" succeeded
+INFO: "Snack bar components" succeeded
+INFO: "SponsorBlock" succeeded
+INFO: "Spoof app version" succeeded
+INFO: "Spoof streaming data" succeeded
+INFO: "Spoof watch history" succeeded
+INFO: "Swipe controls" succeeded
+INFO: "Theme" succeeded
+INFO: "Toolbar components" succeeded
+INFO: "Translations for YouTube" succeeded
+INFO: "Video playback" succeeded
+INFO: "Visual preferences icons for YouTube" succeeded
+INFO: "Hook YouTube Music actions" succeeded
+INFO: "Settings for YouTube" succeeded
+INFO: Compiling modified resources
+INFO: Ripping selected native libs
+INFO: Aligning APK
+INFO: Saved to /mnt/e/shared/c/git/revanced-magisk-module/temp/rvx-youtube-revanced-extended-19.47.53-arm64-v8a-module.apk
+INFO: Purging temporary files
+INFO: Purged resource cache directory
+[+] Packing module Youtube-Extended-Abknc (arm64-v8a)
+[+] Built Youtube-Extended-Abknc (arm64-v8a) (root): 'build/rvx-youtube-revanced-extended-magisk-v19.47.53-arm64-v8a.zip'
+Request link: https://apkmirror.com/apk/google-inc/youtube
+Got link: https://apkmirror.com/apk/google-inc/youtube
+[+] Choosing version '19.47.53' for Youtube-Extended-Abknc (arm-v7a)
+[+] Downloading 'Youtube-Extended-Abknc (arm-v7a)' from apkmirror
+Request link: https://apkmirror.com/apk/google-inc/youtube/youtube-19-47-53-release
+Got link: https://apkmirror.com/apk/google-inc/youtube/youtube-19-47-53-release
+[+] Get response from https://apkmirror.com/apk/google-inc/youtube/youtube-19-47-53-release
+armeabi-v7a: Node: <div class="table-row headerFont">
+                        <div class="table-cell rowheight addseparator expand pad dowrap-break-all">
+                            <a class="accent_color" href="/apk/google-inc/youtube/youtube-19-47-53-release/youtube-19-47-53-android-apk-download/">
+                                <svg class="icon tag-icon">
+                                    <use xlink:href="#apkm-icon-tag"></use>
+                                </svg>
+                                19.47.53                            </a>
+                            <span class="apkm-badge">APK</span>
+                                            <br>
+                            <br>
+                        </div>
+                        <div class="table-cell rowheight addseparator expand pad dowrap">universal</div>
+                        <div class="table-cell rowheight addseparator expand pad dowrap">Android 8.0+</div>
+                        <div class="table-cell rowheight addseparator expand pad dowrap">nodpi</div>
+                        <div class="table-cell rowheight addseparator expand pad dowrap">
+                            <a class="accent_color" data-google-interstitial="false" href="/apk/google-inc/youtube/youtube-19-47-53-release/youtube-19-47-53-android-apk-download/">
+                                <svg class="icon download-button-icon">
+                                    <use xlink:href="#apkm-icon-download"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+[+] Got link: https://www.apkmirror.com/apk/google-inc/youtube/youtube-19-47-53-release/youtube-19-47-53-android-apk-download/
+Got link: https://www.apkmirror.com/apk/google-inc/youtube/youtube-19-47-53-release/youtube-19-47-53-android-apk-download/
+Request link: https://www.apkmirror.com/apk/google-inc/youtube/youtube-19-47-53-release/youtube-19-47-53-android-apk-download/
+Got link: https://www.apkmirror.com/apk/google-inc/youtube/youtube-19-47-53-release/youtube-19-47-53-android-apk-download/
+[+] Get response from https://www.apkmirror.com/apk/google-inc/youtube/youtube-19-47-53-release/youtube-19-47-53-android-apk-download/
+[+] Requesting https://www.apkmirror.com/apk/google-inc/youtube/youtube-19-47-53-release/youtube-19-47-53-android-apk-download/download/?key=d180fb9f84701e7cd773e89ccb884ab6ce46f8f7&forcebaseapk=true
+Request link: https://www.apkmirror.com/apk/google-inc/youtube/youtube-19-47-53-release/youtube-19-47-53-android-apk-download/download/?key=d180fb9f84701e7cd773e89ccb884ab6ce46f8f7&forcebaseapk=true
+Got link: https://www.apkmirror.com/apk/google-inc/youtube/youtube-19-47-53-release/youtube-19-47-53-android-apk-download/download/?key=d180fb9f84701e7cd773e89ccb884ab6ce46f8f7&forcebaseapk=true
+[+] Get response from https://www.apkmirror.com/wp-content/themes/APKMirror/download.php?id=7844900&key=1efd357432fdc9731821e8a9d65a48b93a56ce2d&forcebaseapk=true
+Got download link: https://www.apkmirror.com/wp-content/themes/APKMirror/download.php?id=7844900&key=1efd357432fdc9731821e8a9d65a48b93a56ce2d&forcebaseapk=true
+File temp/com.google.android.youtube-19.47.53-arm-v7a.apk is downloaded successfully.
+[+] Get response from https://www.apkmirror.com/wp-content/themes/APKMirror/download.php?id=7844900&key=1efd357432fdc9731821e8a9d65a48b93a56ce2d&forcebaseapk=true
+[+] Building 'Youtube-Extended-Abknc (arm-v7a)' in 'apk' mode
+[+] env -u GITHUB_REPOSITORY java -jar temp/inotia00-rv/revanced-cli-5.0.1-all.jar patch temp/com.google.android.youtube-19.47.53-arm-v7a.apk --purge -o temp/rvx-youtube-revanced-extended-19.47.53-arm-v7a-apk.apk -p temp/anddea-rv/patches-3.7.0.rvp --keystore=ks.keystore --keystore-entry-password=123456789 --keystore-password=123456789 --signer=jhc --keystore-entry-alias=jhc -d "Disable splash animation" -d "Enable debug logging" -e "Custom branding icon for YouTube" -e "Custom branding name for YouTube" -e "Hide Shorts dimming" -e "Hide shortcuts" -e "MaterialYou" -e "Change Version Code" -OiconType="Cairo" -OappIcon="mmt" -OdoubleTapLengthArrays="3, 5, 10, 15, 20, 30, 60, 120, 180" -OBackgroundColor="@android:color/transparent" -OpackageNameYouTube="rvx.android.youtube" -OiconType="rounded" -OchangeTopButtons=true -OchangeVersionCode=true -OsettingsLabel="eXtended" -OinsertPosition="@string/about_key" -OcornerRadius="4.0dip" -OdarkThemeBackgroundColor="?ytBaseBackground" -OlightThemeBackgroundColor="?ytBaseBackground" -OstrokeColor="?attr/ytChipBackground" -OdarkThemeBackgroundColor="@android:color/black" -OlightThemeBackgroundColor="@android:color/white" -OsettingsMenuIcon="yt_alt" -e "GmsCore support" --rip-lib x86_64 --rip-lib x86 --rip-lib arm64-v8a
+INFO: Loading patches
+INFO: Decoding app manifest
+INFO: "Spoof Wi-Fi connection" disabled
+INFO: "Disable edge-to-edge display" disabled
+INFO: "Change version code" disabled
+INFO: "Enable debug logging" disabled manually
+INFO: "Custom branding name for Spotify" disabled
+INFO: "Disable splash animation" disabled manually
+INFO: "Custom header for YouTube" disabled
+INFO: "Enable debug logging" disabled manually
+INFO: Setting patch options
+INFO: Deleting existing temporary files directory
+INFO: Decoding resources
+INFO: Initializing lookup maps
+INFO: Executing patches
+INFO: "Alternative thumbnails" succeeded
+INFO: "Ambient mode control" succeeded
+INFO: "Bypass URL redirects" succeeded
+INFO: "Bypass image region restrictions" succeeded
+INFO: "Change form factor" succeeded
+INFO: "Change live ring click action" succeeded
+INFO: "Change player flyout menu toggles" succeeded
+INFO: "Change share sheet" succeeded
+INFO: "Change start page" succeeded
+INFO: "Custom Shorts action buttons" succeeded
+WARNING: "Change splash icons" is not supported in this version. Use YouTube 19.16.39 or earlier.
+WARNING: Splash animation is not available for "xisr_special".
+INFO: "Custom branding icon for YouTube" succeeded
+INFO: "Custom branding name for YouTube" succeeded
+INFO: "Custom double tap length" succeeded
+INFO: "Description components" succeeded
+INFO: "Disable QUIC protocol" succeeded
+INFO: "Disable forced auto audio tracks" succeeded
+INFO: "Disable forced auto captions" succeeded
+INFO: "Disable haptic feedback" succeeded
+INFO: "Disable layout updates" succeeded
+INFO: "Disable resuming Miniplayer on startup" succeeded
+INFO: "Disable resuming Shorts on startup" succeeded
+INFO: "Enable OPUS codec" succeeded
+INFO: "Enable gradient loading screen" succeeded
+INFO: "Force player buttons background" succeeded
+INFO: "Fullscreen components" succeeded
+INFO: "GmsCore support" succeeded
+INFO: "Hide Shorts dimming" succeeded
+INFO: "Hide accessibility controls dialog" succeeded
+INFO: "Hide action buttons" succeeded
+INFO: "Hide ads" succeeded
+INFO: "Hide comments components" succeeded
+INFO: "Hide feed components" succeeded
+INFO: "Hide feed flyout menu" succeeded
+INFO: "Hide layout components" succeeded
+INFO: "Hide player buttons" succeeded
+INFO: "Hide player flyout menu" succeeded
+INFO: "Hide shortcuts" succeeded
+INFO: "Hook download actions" succeeded
+INFO: "MaterialYou" succeeded
+INFO: "Miniplayer" succeeded
+INFO: "Navigation bar components" succeeded
+INFO: "Open links externally" succeeded
+INFO: "Overlay buttons" succeeded
+INFO: "Player components" succeeded
+INFO: "Remove background playback restrictions" succeeded
+INFO: "Remove viewer discretion dialog" succeeded
+INFO: "Return YouTube Dislike" succeeded
+INFO: "Return YouTube Username" succeeded
+INFO: "Sanitize sharing links" succeeded
+WARNING: "Restore old seekbar thumbnails" is not supported in this version. Use YouTube 19.16.39 or earlier.
+INFO: "Seekbar components" succeeded
+INFO: "Shorts components" succeeded
+INFO: "Snack bar components" succeeded
+INFO: "SponsorBlock" succeeded
+INFO: "Spoof app version" succeeded
+INFO: "Spoof streaming data" succeeded
+INFO: "Spoof watch history" succeeded
+INFO: "Swipe controls" succeeded
+INFO: "Theme" succeeded
+INFO: "Toolbar components" succeeded
+INFO: "Translations for YouTube" succeeded
+INFO: "Video playback" succeeded
+INFO: "Visual preferences icons for YouTube" succeeded
+INFO: "Hook YouTube Music actions" succeeded
+INFO: "Settings for YouTube" succeeded
+INFO: Compiling modified resources
+INFO: Ripping selected native libs
+INFO: Aligning APK
+INFO: Signing APK
+INFO: Saved to /mnt/e/shared/c/git/revanced-magisk-module/temp/rvx-youtube-revanced-extended-19.47.53-arm-v7a-apk.apk
+INFO: Purging temporary files
+INFO: Purged resource cache directory
+[+] Built Youtube-Extended-Abknc (arm-v7a) (non-root): 'build/rvx-youtube-revanced-extended-v19.47.53-arm-v7a.apk'
+[+] Building 'Youtube-Extended-Abknc (arm-v7a)' in 'module' mode
+[+] env -u GITHUB_REPOSITORY java -jar temp/inotia00-rv/revanced-cli-5.0.1-all.jar patch temp/com.google.android.youtube-19.47.53-arm-v7a.apk --purge -o temp/rvx-youtube-revanced-extended-19.47.53-arm-v7a-module.apk -p temp/anddea-rv/patches-3.7.0.rvp --keystore=ks.keystore --keystore-entry-password=123456789 --keystore-password=123456789 --signer=jhc --keystore-entry-alias=jhc -d "Disable splash animation" -d "Enable debug logging" -e "Custom branding icon for YouTube" -e "Custom branding name for YouTube" -e "Hide Shorts dimming" -e "Hide shortcuts" -e "MaterialYou" -e "Change Version Code" -OiconType="Cairo" -OappIcon="mmt" -OdoubleTapLengthArrays="3, 5, 10, 15, 20, 30, 60, 120, 180" -OBackgroundColor="@android:color/transparent" -OpackageNameYouTube="rvx.android.youtube" -OiconType="rounded" -OchangeTopButtons=true -OchangeVersionCode=true -OsettingsLabel="eXtended" -OinsertPosition="@string/about_key" -OcornerRadius="4.0dip" -OdarkThemeBackgroundColor="?ytBaseBackground" -OlightThemeBackgroundColor="?ytBaseBackground" -OstrokeColor="?attr/ytChipBackground" -OdarkThemeBackgroundColor="@android:color/black" -OlightThemeBackgroundColor="@android:color/white" -OsettingsMenuIcon="yt_alt" -d "GmsCore support" --rip-lib x86_64 --rip-lib x86 --rip-lib arm64-v8a --rip-lib armeabi-v7a --unsigned
+INFO: Loading patches
+INFO: Decoding app manifest
+INFO: "Spoof Wi-Fi connection" disabled
+INFO: "Disable edge-to-edge display" disabled
+INFO: "Change version code" disabled
+INFO: "Enable debug logging" disabled manually
+INFO: "GmsCore support" disabled manually
+INFO: "Custom branding name for Spotify" disabled
+INFO: "Disable splash animation" disabled manually
+INFO: "Custom header for YouTube" disabled
+INFO: "Enable debug logging" disabled manually
+INFO: "GmsCore support" disabled manually
+INFO: Setting patch options
+INFO: Deleting existing temporary files directory
+INFO: Decoding resources
+INFO: Initializing lookup maps
+INFO: Executing patches
+INFO: "Alternative thumbnails" succeeded
+INFO: "Ambient mode control" succeeded
+INFO: "Bypass URL redirects" succeeded
+INFO: "Bypass image region restrictions" succeeded
+INFO: "Change form factor" succeeded
+INFO: "Change live ring click action" succeeded
+INFO: "Change player flyout menu toggles" succeeded
+INFO: "Change share sheet" succeeded
+INFO: "Change start page" succeeded
+INFO: "Custom Shorts action buttons" succeeded
+WARNING: "Change splash icons" is not supported in this version. Use YouTube 19.16.39 or earlier.
+WARNING: Splash animation is not available for "xisr_special".
+INFO: "Custom branding icon for YouTube" succeeded
+INFO: "Custom branding name for YouTube" succeeded
+INFO: "Custom double tap length" succeeded
+INFO: "Description components" succeeded
+INFO: "Disable QUIC protocol" succeeded
+INFO: "Disable forced auto audio tracks" succeeded
+INFO: "Disable forced auto captions" succeeded
+INFO: "Disable haptic feedback" succeeded
+INFO: "Disable layout updates" succeeded
+INFO: "Disable resuming Miniplayer on startup" succeeded
+INFO: "Disable resuming Shorts on startup" succeeded
+INFO: "Enable OPUS codec" succeeded
+INFO: "Enable gradient loading screen" succeeded
+INFO: "Force player buttons background" succeeded
+INFO: "Fullscreen components" succeeded
+INFO: "Hide Shorts dimming" succeeded
+INFO: "Hide accessibility controls dialog" succeeded
+INFO: "Hide action buttons" succeeded
+INFO: "Hide ads" succeeded
+INFO: "Hide comments components" succeeded
+INFO: "Hide feed components" succeeded
+INFO: "Hide feed flyout menu" succeeded
+INFO: "Hide layout components" succeeded
+INFO: "Hide player buttons" succeeded
+INFO: "Hide player flyout menu" succeeded
+INFO: "Hide shortcuts" succeeded
+INFO: "Hook download actions" succeeded
+INFO: "MaterialYou" succeeded
+INFO: "Miniplayer" succeeded
+INFO: "Navigation bar components" succeeded
+INFO: "Open links externally" succeeded
+INFO: "Overlay buttons" succeeded
+INFO: "Player components" succeeded
+INFO: "Remove background playback restrictions" succeeded
+INFO: "Remove viewer discretion dialog" succeeded
+INFO: "Return YouTube Dislike" succeeded
+INFO: "Return YouTube Username" succeeded
+INFO: "Sanitize sharing links" succeeded
+WARNING: "Restore old seekbar thumbnails" is not supported in this version. Use YouTube 19.16.39 or earlier.
+INFO: "Seekbar components" succeeded
+INFO: "Shorts components" succeeded
+INFO: "Snack bar components" succeeded
+INFO: "SponsorBlock" succeeded
+INFO: "Spoof app version" succeeded
+INFO: "Spoof streaming data" succeeded
+INFO: "Spoof watch history" succeeded
+INFO: "Swipe controls" succeeded
+INFO: "Theme" succeeded
+INFO: "Toolbar components" succeeded
+INFO: "Translations for YouTube" succeeded
+INFO: "Video playback" succeeded
+INFO: "Visual preferences icons for YouTube" succeeded
+INFO: "Hook YouTube Music actions" succeeded
+INFO: "Settings for YouTube" succeeded
+INFO: Compiling modified resources
+INFO: Ripping selected native libs
+INFO: Aligning APK
+INFO: Saved to /mnt/e/shared/c/git/revanced-magisk-module/temp/rvx-youtube-revanced-extended-19.47.53-arm-v7a-module.apk
+INFO: Purging temporary files
+INFO: Purged resource cache directory
+[+] Packing module Youtube-Extended-Abknc (arm-v7a)
+[+] Built Youtube-Extended-Abknc (arm-v7a) (root): 'build/rvx-youtube-revanced-extended-magisk-v19.47.53-arm-v7a.zip'
+[+] Done
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$
