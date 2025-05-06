@@ -6,6 +6,8 @@ TEMP_DIR="temp"
 BIN_DIR="bin"
 BUILD_DIR="build"
 
+ECO_MATCH=0 # for using with isoneof
+
 if [ "${GITHUB_TOKEN-}" ]; then GH_HEADER="Authorization: token ${GITHUB_TOKEN}"; else GH_HEADER=; fi
 NEXT_VER_CODE=${NEXT_VER_CODE:-$(date +'%Y%m%d')}
 OS=$(uname -o)
@@ -309,8 +311,8 @@ apk_mirror_search() {
 		if [ -z "$node" ]; then break; fi
 		app_table=$($HTMLQ --text --ignore-whitespace <<<"$node")
 		if [ "$(sed -n 3p <<<"$app_table")" = "$apk_bundle" ] && [ "$(sed -n 6p <<<"$app_table")" = "$dpi" ] &&
-			declare ECO_MATCH=1 &&
-			dlarch=$(isoneof "$(sed -n 4p <<<"$app_table")" "${apparch[@]}") && unset ECO_MATCH; then
+			ECO_MATCH=1 &&
+			dlarch=$(isoneof "$(sed -n 4p <<<"$app_table")" "${apparch[@]}") && ECO_MATCH=0; then
 			dlurl=$($HTMLQ --base https://www.apkmirror.com --attribute href "div:nth-child(1) > a:nth-child(1)" <<<"$node")
 			pr "Get link for $dlarch" >&2
 			echo "$dlurl"

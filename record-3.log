@@ -1829,3 +1829,21 @@ zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$ ./build.sh
 [+] You are building locally. Magisk updates will not be enabled.
 utils.sh: line 267: ECO_MATCH: unbound variable
 zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$
+
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$ date
+Tue May  6 12:39:01 +07 2025
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$ ./build.sh
+[+] You are building locally. Magisk updates will not be enabled.
+true
+true
+true
+true
+true
+[+] Getting prebuilts (inotia00)
+Request link: https://api.github.com/repos/inotia00/revanced-cli/releases/latest
+curl: (28) Resolving timed out after 5000 milliseconds
+Get Response: https://api.github.com/repos/inotia00/revanced-cli/releases/latest
+[+] Getting 'temp/inotia00-rv/' from ''
+curl: (3) URL using bad/illegal format or missing URL
+[-] ABORT: could not download rv prebuilts
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$
