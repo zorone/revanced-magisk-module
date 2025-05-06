@@ -308,6 +308,7 @@ apk_mirror_search() {
 			isoneof "$(sed -n 4p <<<"$app_table")" "${apparch[@]}"; then
 			dlurl=$($HTMLQ --base https://www.apkmirror.com --attribute href "div:nth-child(1) > a:nth-child(1)" <<<"$node")
 			pr "Got link: $dlurl" >&2
+			echo "$dlurl"
 			return 0
 		fi
 	done
