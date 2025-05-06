@@ -1821,3 +1821,11 @@ zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$ ./build.sh
 utils.sh: line 266: return: false: numeric argument required
 [-] ABORT: ERROR: 'false' is not a valid option for 'enabled': only true or false is allowed
 zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$
+
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$ date
+Tue May  6 12:32:16 +07 2025
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$ ./build.sh clean
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$ ./build.sh
+[+] You are building locally. Magisk updates will not be enabled.
+utils.sh: line 267: ECO_MATCH: unbound variable
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$

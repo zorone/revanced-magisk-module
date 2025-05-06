@@ -263,7 +263,11 @@ get_patch_last_supported_ver() {
 isoneof() {
 	local i=$1 v
 	shift
-	for v; do [ "$v" = "$i" ] && return "$v"; done
+	for v; do [ "$v" = "$i" ]
+		if [ $ECO_MATCH ];
+			then echo "$v";
+		fi
+		return 0; done
 	return 1
 }
 
@@ -305,7 +309,8 @@ apk_mirror_search() {
 		if [ -z "$node" ]; then break; fi
 		app_table=$($HTMLQ --text --ignore-whitespace <<<"$node")
 		if [ "$(sed -n 3p <<<"$app_table")" = "$apk_bundle" ] && [ "$(sed -n 6p <<<"$app_table")" = "$dpi" ] &&
-			dlarch=$(isoneof "$(sed -n 4p <<<"$app_table")" "${apparch[@]}"); then
+			readonly ECO_MATCH=1 &&
+			dlarch=$(isoneof "$(sed -n 4p <<<"$app_table")" "${apparch[@]}") && unset ECO_MATCH; then
 			dlurl=$($HTMLQ --base https://www.apkmirror.com --attribute href "div:nth-child(1) > a:nth-child(1)" <<<"$node")
 			pr "Get link for $dlarch" >&2
 			echo "$dlurl"
