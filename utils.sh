@@ -317,8 +317,8 @@ apk_mirror_search() {
 	done
 	if [ -z "$node" ]; then
 		epr "Couldn't find any node with CSS condition \"div.table-row.headerFont:nth-last-child(n)\" -r \"span:nth-child(n+3)\" " >&2
-		epr "More debugging info:" >&2
-		epr "$resp" >&2
+		epr "More debugging info, see ${TEMP_DIR}/err.log" >&2
+		echo "RESP=$resp" > ${TEMP_DIR}/err.log
 	else
 		epr "Couldn't get link with condition: $apk_bundle, dpi = $dpi, arch = $arch" >&2
 	fi
@@ -566,14 +566,21 @@ build_rv() {
 	rv_brand_f=${rv_brand_f// /-}
 	if [ "${args[patcher_args]}" ]; then p_patcher_args+=("${args[patcher_args]}"); fi
 	for build_mode in "${build_mode_arr[@]}"; do
+		local patched_apk_name file_output file_output_name file_output_path
 		patcher_args=("${p_patcher_args[@]}")
 		pr "Building '${table}' in '$build_mode' mode"
 		if [ -n "$microg_patch" ]; then
 			patched_apk_name="${app_name_l}-${rv_brand_f}-${version_f}-${arch_f}-${build_mode}.apk"
+			file_output_name="${app_name_l}-${rv_brand_f}-v${version_f}-${arch_f}.apk"
+			file_output="${BUILD_DIR}/${file_output_name}"
+			file_output_path="${CWD}/${BUILD_DIR}/${file_output_name}"
 		else
 			patched_apk_name="${app_name_l}-${rv_brand_f}-${version_f}-${arch_f}.apk"
+			file_output_name="${app_name_l}-${rv_brand_f}-magisk-v${version_f}-${arch_f}.zip"
+			file_output="${BUILD_DIR}/${file_output_name}"
+			file_output_path="${CWD}/${BUILD_DIR}/${file_output_name}"
 		fi
-		if [ -f "${BUILD_DIR}/${patched_apk_name}" ]; then
+		if [ -f "${file_output_path}" ]; then
 			read -p "File already been built. Rebuild? (Y/N): " confirm && 
 			[[ $confirm == [yY] || $confirm == [yY][eE][sS] ]] ||
 			continue;
@@ -605,9 +612,8 @@ build_rv() {
 			fi
 		fi
 		if [ "$build_mode" = apk ]; then
-			local apk_output="${BUILD_DIR}/${app_name_l}-${rv_brand_f}-v${version_f}-${arch_f}.apk"
-			mv -f "$patched_apk" "$apk_output"
-			pr "Built ${table} (non-root): '${apk_output}'"
+			mv -f "$patched_apk" "$file_output"
+			pr "Built ${table} (non-root): '${file_output}'"
 			continue
 		fi
 		local base_template
@@ -626,14 +632,13 @@ build_rv() {
 			"https://raw.githubusercontent.com/${GITHUB_REPOSITORY-}/update/${upj}" \
 			"$base_template"
 
-		local module_output="${app_name_l}-${rv_brand_f}-magisk-v${version_f}-${arch_f}.zip"
 		pr "Packing module ${table}"
 		cp -f "$patched_apk" "${base_template}/base.apk"
 		if [ "${args[include_stock]}" = true ]; then cp -f "$stock_apk" "${base_template}/${pkg_name}.apk"; fi
 		pushd >/dev/null "$base_template" || abort "Module template dir not found"
-		zip -"$COMPRESSION_LEVEL" -FSqr "${CWD}/${BUILD_DIR}/${module_output}" .
+		zip -"$COMPRESSION_LEVEL" -FSqr "${file_output_path}" .
 		popd >/dev/null || :
-		pr "Built ${table} (root): '${BUILD_DIR}/${module_output}'"
+		pr "Built ${table} (root): '${file_output}'"
 	done
 }
 
