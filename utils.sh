@@ -6,7 +6,7 @@ TEMP_DIR="temp"
 BIN_DIR="bin"
 BUILD_DIR="build"
 
-ECO_MATCH=0 # for using with isoneof
+MATCH_WITH= # for keeping result of isoneof
 
 if [ "${GITHUB_TOKEN-}" ]; then GH_HEADER="Authorization: token ${GITHUB_TOKEN}"; else GH_HEADER=; fi
 NEXT_VER_CODE=${NEXT_VER_CODE:-$(date +'%Y%m%d')}
@@ -265,11 +265,7 @@ get_patch_last_supported_ver() {
 isoneof() {
 	local i=$1 v
 	shift
-	for v; do [ "$v" = "$i" ];
-		if [ $ECO_MATCH -ne 0 ];
-			then echo "$v";
-		fi
-		return 0; done
+	for v; do [ "$v" = "$i" ] && MATCH_WITH="$v" && return 0; done
 	return 1
 }
 
@@ -311,9 +307,9 @@ apk_mirror_search() {
 		if [ -z "$node" ]; then break; fi
 		app_table=$($HTMLQ --text --ignore-whitespace <<<"$node")
 		if [ "$(sed -n 3p <<<"$app_table")" = "$apk_bundle" ] && [ "$(sed -n 6p <<<"$app_table")" = "$dpi" ] &&
-			ECO_MATCH=1 &&
-			dlarch=$(isoneof "$(sed -n 4p <<<"$app_table")" "${apparch[@]}") && ECO_MATCH=0; then
+			isoneof "$(sed -n 4p <<<"$app_table")" "${apparch[@]}"; then
 			dlurl=$($HTMLQ --base https://www.apkmirror.com --attribute href "div:nth-child(1) > a:nth-child(1)" <<<"$node")
+			dlarch=$MATCH_WITH
 			pr "Get link for $dlarch" >&2
 			echo "$dlurl"
 			return 0
@@ -330,6 +326,7 @@ dl_apkmirror() {
 		local resp node app_table dlurl=""
 		url="${url}/${url##*/}-${version//./-}-release"
 		resp=$(req "$url" -) || return 1
+		pr "Get response from $url" >&2
 		node=$($HTMLQ "div.table-row.headerFont:nth-last-child(1)" -r "span:nth-child(n+3)" <<<"$resp")
 		echo "$arch: Node: $node"
 		if [ "$node" ]; then
@@ -542,6 +539,8 @@ build_rv() {
 			break
 		done
 		if [ ! -f "$stock_apk" ]; then return 0; fi
+	else
+		pr "Using existed file: $stock_apk" >&2
 	fi
 	if ! check_sig "$stock_apk" "$pkg_name"; then
 		abort "apk signature mismatch '$stock_apk'"
