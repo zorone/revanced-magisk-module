@@ -265,8 +265,8 @@ get_patch_last_supported_ver() {
 isoneof() {
 	local i=$1 v
 	shift
-	for v; do [ "$v" = "$i" ]
-		if [ $ECO_MATCH ];
+	for v; do [ "$v" = "$i" ];
+		if [ $ECO_MATCH -ne 0 ];
 			then echo "$v";
 		fi
 		return 0; done
