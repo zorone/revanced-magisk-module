@@ -263,7 +263,7 @@ get_patch_last_supported_ver() {
 isoneof() {
 	local i=$1 v
 	shift
-	for v; do [ "$v" = "$i" ] && echo "$v" && return 0; done
+	for v; do [ "$v" = "$i" ] && return "$v"; done
 	return 1
 }
 
