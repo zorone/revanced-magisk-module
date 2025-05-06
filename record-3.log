@@ -2582,3 +2582,314 @@ all: Node: <div class="table-row headerFont">
 zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$ date
 Wed May  7 05:08:27 +07 2025
 zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$
+
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$ date
+Wed May  7 05:25:10 +07 2025
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$ ./build.sh
+[+] You are building locally. Magisk updates will not be enabled.
+./build.sh: line 51: "$TEMP_DIR"/*-rv/changelog.md: ambiguous redirect
+[+] Getting prebuilts (inotia00)
+Request link: https://api.github.com/repos/inotia00/revanced-cli/releases/latest
+Get Response: https://api.github.com/repos/inotia00/revanced-cli/releases/latest
+Request link: https://api.github.com/repos/inotia00/revanced-patches/releases/latest
+Get Response: https://api.github.com/repos/inotia00/revanced-patches/releases/latest
+
+Request link: https://www.apkmirror.com/apk/google-inc/youtube-music
+Get Response: https://www.apkmirror.com/apk/google-inc/youtube-music
+[+] Choosing version '8.05.51' for Music-Extended (arm64-v8a)
+[+] Using existed file: temp/com.google.android.apps.youtube.music-8.05.51-arm64-v8a.apk
+[+] Building 'Music-Extended (arm64-v8a)' in 'apk' mode
+[+] env -u GITHUB_REPOSITORY java -jar temp/inotia00-rv/revanced-cli-5.0.1-all.jar patch temp/com.google.android.apps.youtube.music-8.05.51-arm64-v8a.apk --purge -o temp/music-revanced-extended-8.05.51-arm64-v8a-apk.apk -p temp/inotia00-rv/patches-5.6.2.rvp --keystore=ks.keystore --keystore-entry-password=123456789 --keystore-password=123456789 --signer=jhc --keystore-entry-alias=jhc -e "GmsCore support" --rip-lib x86_64 --rip-lib x86 --rip-lib armeabi-v7a
+INFO: Loading patches
+INFO: Decoding app manifest
+INFO: "Spoof Wi-Fi connection" disabled
+INFO: "Disable edge-to-edge display" disabled
+INFO: "Change version code" disabled
+INFO: "Custom header for YouTube Music" disabled
+INFO: "Hide overlay filter" disabled
+INFO: "Hide player overlay filter" disabled
+INFO: "Disable music video in album" disabled
+INFO: "Return YouTube Username" disabled
+INFO: Setting patch options
+INFO: Deleting existing temporary files directory
+INFO: Decoding resources
+INFO: Initializing lookup maps
+INFO: Executing patches
+INFO: "Bitrate default value" succeeded
+INFO: "Bypass image region restrictions" succeeded
+INFO: "Certificate spoof" succeeded
+INFO: "Change share sheet" succeeded
+INFO: "Change start page" succeeded
+INFO: "Custom branding icon for YouTube Music" succeeded
+INFO: "Custom branding name for YouTube Music" succeeded
+INFO: "Dark theme" succeeded
+INFO: "Disable Cairo splash animation" succeeded
+INFO: "Disable DRC audio" succeeded
+INFO: "Disable QUIC protocol" succeeded
+INFO: "Disable dislike redirection" succeeded
+INFO: "Disable forced auto captions" succeeded
+INFO: "Enable OPUS codec" succeeded
+INFO: "Enable debug logging" succeeded
+INFO: "Enable landscape mode" succeeded
+INFO: "Flyout menu components" succeeded
+INFO: "GmsCore support" succeeded
+INFO: "Hide account components" succeeded
+INFO: "Hide action bar components" succeeded
+INFO: "Hide ads" succeeded
+INFO: "Hide layout components" succeeded
+INFO: "Navigation bar components" succeeded
+INFO: "Player components" succeeded
+INFO: "Remove background playback restrictions" succeeded
+INFO: "Remove viewer discretion dialog" succeeded
+INFO: "Restore old style library shelf" succeeded
+INFO: "Return YouTube Dislike" succeeded
+INFO: "Sanitize sharing links" succeeded
+INFO: "SponsorBlock" succeeded
+INFO: "Spoof app version" succeeded
+INFO: "Spoof player parameter" succeeded
+INFO: "Translations for YouTube Music" succeeded
+INFO: "Video playback" succeeded
+INFO: "Watch history" succeeded
+INFO: "Visual preferences icons for YouTube Music" succeeded
+INFO: "Settings for YouTube Music" succeeded
+INFO: Compiling modified resources
+INFO: Ripping selected native libs
+INFO: Aligning APK
+INFO: Signing APK
+INFO: Saved to /mnt/e/shared/c/git/revanced-magisk-module/temp/music-revanced-extended-8.05.51-arm64-v8a-apk.apk
+INFO: Purging temporary files
+INFO: Purged resource cache directory
+[+] Built Music-Extended (arm64-v8a) (non-root): 'build/music-revanced-extended-v8.05.51-arm64-v8a.apk'
+[+] Building 'Music-Extended (arm64-v8a)' in 'module' mode
+[+] env -u GITHUB_REPOSITORY java -jar temp/inotia00-rv/revanced-cli-5.0.1-all.jar patch temp/com.google.android.apps.youtube.music-8.05.51-arm64-v8a.apk --purge -o temp/music-revanced-extended-8.05.51-arm64-v8a-module.apk -p temp/inotia00-rv/patches-5.6.2.rvp --keystore=ks.keystore --keystore-entry-password=123456789 --keystore-password=123456789 --signer=jhc --keystore-entry-alias=jhc -d "GmsCore support" --rip-lib x86_64 --rip-lib x86 --rip-lib arm64-v8a --rip-lib armeabi-v7a --unsigned
+INFO: Loading patches
+INFO: Decoding app manifest
+INFO: "Spoof Wi-Fi connection" disabled
+INFO: "Disable edge-to-edge display" disabled
+INFO: "Change version code" disabled
+INFO: "Custom header for YouTube Music" disabled
+INFO: "Hide overlay filter" disabled
+INFO: "Hide player overlay filter" disabled
+INFO: "Disable music video in album" disabled
+INFO: "GmsCore support" disabled manually
+INFO: "Return YouTube Username" disabled
+INFO: "GmsCore support" disabled manually
+INFO: Setting patch options
+INFO: Deleting existing temporary files directory
+INFO: Decoding resources
+INFO: Initializing lookup maps
+INFO: Executing patches
+INFO: "Bitrate default value" succeeded
+INFO: "Bypass image region restrictions" succeeded
+INFO: "Certificate spoof" succeeded
+INFO: "Change share sheet" succeeded
+INFO: "Change start page" succeeded
+INFO: "Custom branding icon for YouTube Music" succeeded
+INFO: "Custom branding name for YouTube Music" succeeded
+INFO: "Dark theme" succeeded
+INFO: "Disable Cairo splash animation" succeeded
+INFO: "Disable DRC audio" succeeded
+INFO: "Disable QUIC protocol" succeeded
+INFO: "Disable dislike redirection" succeeded
+INFO: "Disable forced auto captions" succeeded
+INFO: "Enable OPUS codec" succeeded
+INFO: "Enable debug logging" succeeded
+INFO: "Enable landscape mode" succeeded
+INFO: "Flyout menu components" succeeded
+INFO: "Hide account components" succeeded
+INFO: "Hide action bar components" succeeded
+INFO: "Hide ads" succeeded
+INFO: "Hide layout components" succeeded
+INFO: "Navigation bar components" succeeded
+INFO: "Player components" succeeded
+INFO: "Remove background playback restrictions" succeeded
+INFO: "Remove viewer discretion dialog" succeeded
+INFO: "Restore old style library shelf" succeeded
+INFO: "Return YouTube Dislike" succeeded
+INFO: "Sanitize sharing links" succeeded
+INFO: "SponsorBlock" succeeded
+INFO: "Spoof app version" succeeded
+INFO: "Spoof player parameter" succeeded
+INFO: "Translations for YouTube Music" succeeded
+INFO: "Video playback" succeeded
+INFO: "Watch history" succeeded
+INFO: "Visual preferences icons for YouTube Music" succeeded
+INFO: "Settings for YouTube Music" succeeded
+INFO: Compiling modified resources
+INFO: Ripping selected native libs
+INFO: Aligning APK
+INFO: Saved to /mnt/e/shared/c/git/revanced-magisk-module/temp/music-revanced-extended-8.05.51-arm64-v8a-module.apk
+INFO: Purging temporary files
+INFO: Purged resource cache directory
+[+] Packing module Music-Extended (arm64-v8a)
+[+] Built Music-Extended (arm64-v8a) (root): 'build/music-revanced-extended-magisk-v8.05.51-arm64-v8a.zip'
+Request link: https://www.apkmirror.com/apk/google-inc/youtube-music
+Get Response: https://www.apkmirror.com/apk/google-inc/youtube-music
+[+] Choosing version '8.05.51' for Music-Extended (arm-v7a)
+[+] Using existed file: temp/com.google.android.apps.youtube.music-8.05.51-arm-v7a.apk
+[+] Building 'Music-Extended (arm-v7a)' in 'apk' mode
+[+] env -u GITHUB_REPOSITORY java -jar temp/inotia00-rv/revanced-cli-5.0.1-all.jar patch temp/com.google.android.apps.youtube.music-8.05.51-arm-v7a.apk --purge -o temp/music-revanced-extended-8.05.51-arm-v7a-apk.apk -p temp/inotia00-rv/patches-5.6.2.rvp --keystore=ks.keystore --keystore-entry-password=123456789 --keystore-password=123456789 --signer=jhc --keystore-entry-alias=jhc -e "GmsCore support" --rip-lib x86_64 --rip-lib x86 --rip-lib arm64-v8a
+INFO: Loading patches
+INFO: Decoding app manifest
+INFO: "Spoof Wi-Fi connection" disabled
+INFO: "Disable edge-to-edge display" disabled
+INFO: "Change version code" disabled
+INFO: "Custom header for YouTube Music" disabled
+INFO: "Hide overlay filter" disabled
+INFO: "Hide player overlay filter" disabled
+INFO: "Disable music video in album" disabled
+INFO: "Return YouTube Username" disabled
+INFO: Setting patch options
+INFO: Deleting existing temporary files directory
+INFO: Decoding resources
+INFO: Initializing lookup maps
+INFO: Executing patches
+INFO: "Bitrate default value" succeeded
+INFO: "Bypass image region restrictions" succeeded
+INFO: "Certificate spoof" succeeded
+INFO: "Change share sheet" succeeded
+INFO: "Change start page" succeeded
+INFO: "Custom branding icon for YouTube Music" succeeded
+INFO: "Custom branding name for YouTube Music" succeeded
+INFO: "Dark theme" succeeded
+INFO: "Disable Cairo splash animation" succeeded
+INFO: "Disable DRC audio" succeeded
+INFO: "Disable QUIC protocol" succeeded
+INFO: "Disable dislike redirection" succeeded
+INFO: "Disable forced auto captions" succeeded
+INFO: "Enable OPUS codec" succeeded
+INFO: "Enable debug logging" succeeded
+INFO: "Enable landscape mode" succeeded
+INFO: "Flyout menu components" succeeded
+INFO: "GmsCore support" succeeded
+INFO: "Hide account components" succeeded
+INFO: "Hide action bar components" succeeded
+INFO: "Hide ads" succeeded
+INFO: "Hide layout components" succeeded
+INFO: "Navigation bar components" succeeded
+INFO: "Player components" succeeded
+INFO: "Remove background playback restrictions" succeeded
+INFO: "Remove viewer discretion dialog" succeeded
+INFO: "Restore old style library shelf" succeeded
+INFO: "Return YouTube Dislike" succeeded
+INFO: "Sanitize sharing links" succeeded
+INFO: "SponsorBlock" succeeded
+INFO: "Spoof app version" succeeded
+INFO: "Spoof player parameter" succeeded
+INFO: "Translations for YouTube Music" succeeded
+INFO: "Video playback" succeeded
+INFO: "Watch history" succeeded
+INFO: "Visual preferences icons for YouTube Music" succeeded
+INFO: "Settings for YouTube Music" succeeded
+INFO: Compiling modified resources
+INFO: Ripping selected native libs
+INFO: Aligning APK
+INFO: Signing APK
+INFO: Saved to /mnt/e/shared/c/git/revanced-magisk-module/temp/music-revanced-extended-8.05.51-arm-v7a-apk.apk
+INFO: Purging temporary files
+INFO: Purged resource cache directory
+[+] Built Music-Extended (arm-v7a) (non-root): 'build/music-revanced-extended-v8.05.51-arm-v7a.apk'
+[+] Building 'Music-Extended (arm-v7a)' in 'module' mode
+[+] env -u GITHUB_REPOSITORY java -jar temp/inotia00-rv/revanced-cli-5.0.1-all.jar patch temp/com.google.android.apps.youtube.music-8.05.51-arm-v7a.apk --purge -o temp/music-revanced-extended-8.05.51-arm-v7a-module.apk -p temp/inotia00-rv/patches-5.6.2.rvp --keystore=ks.keystore --keystore-entry-password=123456789 --keystore-password=123456789 --signer=jhc --keystore-entry-alias=jhc -d "GmsCore support" --rip-lib x86_64 --rip-lib x86 --rip-lib arm64-v8a --rip-lib armeabi-v7a --unsigned
+INFO: Loading patches
+INFO: Decoding app manifest
+INFO: "Spoof Wi-Fi connection" disabled
+INFO: "Disable edge-to-edge display" disabled
+INFO: "Change version code" disabled
+INFO: "Custom header for YouTube Music" disabled
+INFO: "Hide overlay filter" disabled
+INFO: "Hide player overlay filter" disabled
+INFO: "Disable music video in album" disabled
+INFO: "GmsCore support" disabled manually
+INFO: "Return YouTube Username" disabled
+INFO: "GmsCore support" disabled manually
+INFO: Setting patch options
+INFO: Deleting existing temporary files directory
+INFO: Decoding resources
+INFO: Initializing lookup maps
+INFO: Executing patches
+INFO: "Bitrate default value" succeeded
+INFO: "Bypass image region restrictions" succeeded
+INFO: "Certificate spoof" succeeded
+INFO: "Change share sheet" succeeded
+INFO: "Change start page" succeeded
+INFO: "Custom branding icon for YouTube Music" succeeded
+INFO: "Custom branding name for YouTube Music" succeeded
+INFO: "Dark theme" succeeded
+INFO: "Disable Cairo splash animation" succeeded
+INFO: "Disable DRC audio" succeeded
+INFO: "Disable QUIC protocol" succeeded
+INFO: "Disable dislike redirection" succeeded
+INFO: "Disable forced auto captions" succeeded
+INFO: "Enable OPUS codec" succeeded
+INFO: "Enable debug logging" succeeded
+INFO: "Enable landscape mode" succeeded
+INFO: "Flyout menu components" succeeded
+INFO: "Hide account components" succeeded
+INFO: "Hide action bar components" succeeded
+INFO: "Hide ads" succeeded
+INFO: "Hide layout components" succeeded
+INFO: "Navigation bar components" succeeded
+INFO: "Player components" succeeded
+INFO: "Remove background playback restrictions" succeeded
+INFO: "Remove viewer discretion dialog" succeeded
+INFO: "Restore old style library shelf" succeeded
+INFO: "Return YouTube Dislike" succeeded
+INFO: "Sanitize sharing links" succeeded
+INFO: "SponsorBlock" succeeded
+INFO: "Spoof app version" succeeded
+INFO: "Spoof player parameter" succeeded
+INFO: "Translations for YouTube Music" succeeded
+INFO: "Video playback" succeeded
+INFO: "Watch history" succeeded
+INFO: "Visual preferences icons for YouTube Music" succeeded
+INFO: "Settings for YouTube Music" succeeded
+INFO: Compiling modified resources
+INFO: Ripping selected native libs
+INFO: Aligning APK
+INFO: Saved to /mnt/e/shared/c/git/revanced-magisk-module/temp/music-revanced-extended-8.05.51-arm-v7a-module.apk
+INFO: Purging temporary files
+INFO: Purged resource cache directory
+[+] Packing module Music-Extended (arm-v7a)
+[+] Built Music-Extended (arm-v7a) (root): 'build/music-revanced-extended-magisk-v8.05.51-arm-v7a.zip'
+[+] Getting prebuilts (anddea)
+Request link: https://api.github.com/repos/inotia00/revanced-cli/releases/latest
+Get Response: https://api.github.com/repos/inotia00/revanced-cli/releases/latest
+Request link: https://api.github.com/repos/anddea/revanced-patches/releases/latest
+Get Response: https://api.github.com/repos/anddea/revanced-patches/releases/latest
+
+Request link: https://www.apkmirror.com/apk/google-inc/youtube-music
+Get Response: https://www.apkmirror.com/apk/google-inc/youtube-music
+[+] Choosing version '8.12.53' for Music-Extended-Abknc
+[+] Downloading 'Music-Extended-Abknc' from apkmirror
+Request link: https://www.apkmirror.com/apk/google-inc/youtube-music/youtube-music-8-12-53-release
+Get Response: https://www.apkmirror.com/apk/google-inc/youtube-music/youtube-music-8-12-53-release
+[+] Get response from https://www.apkmirror.com/apk/google-inc/youtube-music/youtube-music-8-12-53-release
+all: Node: <div class="table-row headerFont">
+                        <div class="table-cell rowheight addseparator expand pad dowrap-break-all">
+                            <a class="accent_color" href="/apk/google-inc/youtube-music/youtube-music-8-12-53-release/youtube-music-8-12-53-3-android-apk-download/">
+                                <svg class="icon tag-icon">
+                                    <use xlink:href="#apkm-icon-tag"></use>
+                                </svg>
+                                8.12.53                            </a>
+                            <span class="apkm-badge">APK</span>
+
+                                <br>
+                            <br>
+                        </div>
+                        <div class="table-cell rowheight addseparator expand pad dowrap">x86_64</div>
+                        <div class="table-cell rowheight addseparator expand pad dowrap">Android 8.0+</div>
+                        <div class="table-cell rowheight addseparator expand pad dowrap">nodpi</div>
+                        <div class="table-cell rowheight addseparator expand pad dowrap">
+                            <a class="accent_color" data-google-interstitial="false" href="/apk/google-inc/youtube-music/youtube-music-8-12-53-release/youtube-music-8-12-53-3-android-apk-download/">
+                                <svg class="icon download-button-icon">
+                                    <use xlink:href="#apkm-icon-download"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+[-] Couldn't find any node with CSS condition "div.table-row.headerFont:nth-last-child(n)" -r "span:nth-child(n+3)"
+[-] Couldn't find any node with CSS condition "div.table-row.headerFont:nth-last-child(n)" -r "span:nth-child(n+3)"
+[-] ERROR: Could not download 'Music-Extended-Abknc' from apkmirror with version '8.12.53', arch 'all', dpi 'nodpi'
+[+] Done
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$

@@ -297,7 +297,7 @@ merge_splits() {
 
 # -------------------- apkmirror --------------------
 apk_mirror_search() {
-	local resp="$1" dpi="$2" arch="$3" apk_bundle="$4"
+	local resp="$1" dpi="$2" arch="$3" apk_bundle="$4" node
 	local apparch dlurl node app_table
 	if [ "$arch" = all ]; then
 		apparch=(universal noarch 'arm64-v8a + armeabi-v7a')
@@ -315,6 +315,11 @@ apk_mirror_search() {
 			return 0
 		fi
 	done
+	if [ -z "$node" ]; then
+		epr "Couldn't find any node with CSS condition \"div.table-row.headerFont:nth-last-child(n)\" -r \"span:nth-child(n+3)\" " >&2
+	else
+		epr "Couldn't get link with condition: $apk_bundle, dpi = $dpi, arch = $arch" >&2
+	fi
 	return 1
 }
 dl_apkmirror() {
@@ -562,10 +567,16 @@ build_rv() {
 		patcher_args=("${p_patcher_args[@]}")
 		pr "Building '${table}' in '$build_mode' mode"
 		if [ -n "$microg_patch" ]; then
-			patched_apk="${TEMP_DIR}/${app_name_l}-${rv_brand_f}-${version_f}-${arch_f}-${build_mode}.apk"
+			patched_apk_name="${app_name_l}-${rv_brand_f}-${version_f}-${arch_f}-${build_mode}.apk"
 		else
-			patched_apk="${TEMP_DIR}/${app_name_l}-${rv_brand_f}-${version_f}-${arch_f}.apk"
+			patched_apk_name="${app_name_l}-${rv_brand_f}-${version_f}-${arch_f}.apk"
 		fi
+		if [ -f "${BUILD_DIR}/${patched_apk_name}"]
+			read -p "File already been built. Rebuild? (Y/N): " confirm && 
+			[[ $confirm == [yY] || $confirm == [yY][eE][sS] ]] ||
+			continue
+		fi
+		patched_apk="${TEMP_DIR}/${patched_apk_name}"
 		if [ -n "$microg_patch" ]; then
 			if [ "$build_mode" = apk ]; then
 				patcher_args+=("-e \"${microg_patch}\"")
