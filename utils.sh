@@ -560,7 +560,7 @@ build_rv() {
 			if [[ $arch == "all" || $arch == "both" ]]; then
 				epr "ERROR: Could not download '${table}' with version '${version}', arch '${arch}', dpi '${args[dpi]}', try download with each native version instead."
 				for dl_arch in arm64-v8a armeabi-v7a; do
-					if [[ $arch == "armeabi-v7a" ]]; then arch_f="arm-v7a"; else arch_f=$dl_arch; done
+					if [[ $arch == "armeabi-v7a" ]]; then arch_f="arm-v7a"; else arch_f=$dl_arch; fi
 					stock_apk="${TEMP_DIR}/${pkg_name}-${version_f}-${arch_f}.apk"
 					for dl_p in archive apkmirror uptodown; do
 						if [ -z "${args[${dl_p}_dlurl]}" ]; then continue; fi
