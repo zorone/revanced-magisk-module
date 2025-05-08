@@ -560,14 +560,14 @@ build_rv() {
 			if [[ $arch == "all" || $arch == "both" ]]; then
 				epr "ERROR: Could not download '${table}' with version '${version}', arch '${arch}', dpi '${args[dpi]}', try download with each native version instead."
 				for dl_arch in arm64-v8a armeabi-v7a; do
-					if [[ $arch == "armeabi-v7a" ]]; then arch_f="arm-v7a"; else arch_f=$dl_arch; fi
+					if [[ $dl_arch == "armeabi-v7a" ]]; then arch_f="arm-v7a"; else arch_f=$dl_arch; fi
 					stock_apk="${TEMP_DIR}/${pkg_name}-${version_f}-${arch_f}.apk"
 					for dl_p in archive apkmirror uptodown; do
 						if [ -z "${args[${dl_p}_dlurl]}" ]; then continue; fi
 						pr "Downloading '${table}' from ${dl_p}"
 						if ! isoneof $dl_p "${tried_dl[@]}"; then get_${dl_p}_resp "${args[${dl_p}_dlurl]}"; fi
-						if ! dl_${dl_p} "${args[${dl_p}_dlurl]}" "$version" "$stock_apk" "$arch" "${args[dpi]}" "$get_latest_ver"; then
-							epr "ERROR: Could not download '${table}' from ${dl_p} with version '${version}', arch '${arch}', dpi '${args[dpi]}'"
+						if ! dl_${dl_p} "${args[${dl_p}_dlurl]}" "$version" "$stock_apk" "$dl_arch" "${args[dpi]}" "$get_latest_ver"; then
+							epr "ERROR: Could not download '${table}' from ${dl_p} with version '${version}', arch '${dl_arch}', dpi '${args[dpi]}'"
 							continue
 						else
 							break
