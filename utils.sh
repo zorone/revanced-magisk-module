@@ -315,7 +315,7 @@ apk_mirror_search() {
 			return 0
 		fi
 	done
-	if [ -z "$node" && n -le 2 ]; then
+	if [ -z "$node" && $n -le 2 ]; then
 		epr "Couldn't find any node with CSS condition \"div.table-row.headerFont:nth-last-child(n)\" -r \"span:nth-child(n+3)\" " >&2
 		epr "More debugging info, see ${TEMP_DIR}/err.log" >&2
 		echo "RESP=\"$resp\"" > ${TEMP_DIR}/err.log
