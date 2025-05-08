@@ -5665,3 +5665,158 @@ curl: (3) URL using bad/illegal format or missing URL
 [-] ERROR: Unable to download native version. The program will now abort.
 [+] Done
 zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$
+
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$ date
+Fri May  9 06:50:40 +07 2025
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$ ./build.sh
+[+] You are building locally. Magisk updates will not be enabled.
+./build.sh: line 51: "$TEMP_DIR"/*-rv/changelog.md: ambiguous redirect
+[+] Getting prebuilts (inotia00)
+Request link: https://api.github.com/repos/inotia00/revanced-cli/releases/latest
+Get Response: https://api.github.com/repos/inotia00/revanced-cli/releases/latest
+Request link: https://api.github.com/repos/inotia00/revanced-patches/releases/latest
+Get Response: https://api.github.com/repos/inotia00/revanced-patches/releases/latest
+
+Request link: https://www.apkmirror.com/apk/google-inc/youtube-music
+Get Response: https://www.apkmirror.com/apk/google-inc/youtube-music
+[+] Choosing version '8.05.51' for Music-Extended (arm64-v8a)
+[+] Using existed file: temp/com.google.android.apps.youtube.music-8.05.51-arm64-v8a.apk
+[+] Building 'Music-Extended (arm64-v8a)' in 'apk' mode
+[+] Building 'Music-Extended (arm64-v8a)' in 'module' mode
+Request link: https://www.apkmirror.com/apk/google-inc/youtube-music
+Get Response: https://www.apkmirror.com/apk/google-inc/youtube-music
+[+] Choosing version '8.05.51' for Music-Extended (arm-v7a)
+[+] Using existed file: temp/com.google.android.apps.youtube.music-8.05.51-arm-v7a.apk
+[+] Building 'Music-Extended (arm-v7a)' in 'apk' mode
+[+] Building 'Music-Extended (arm-v7a)' in 'module' mode
+[+] Getting prebuilts (anddea)
+Request link: https://api.github.com/repos/inotia00/revanced-cli/releases/latest
+Get Response: https://api.github.com/repos/inotia00/revanced-cli/releases/latest
+Request link: https://api.github.com/repos/anddea/revanced-patches/releases/latest
+Get Response: https://api.github.com/repos/anddea/revanced-patches/releases/latest
+
+Request link: https://www.apkmirror.com/apk/google-inc/youtube-music
+Get Response: https://www.apkmirror.com/apk/google-inc/youtube-music
+[+] Choosing version '8.12.53' for Music-Extended-Abknc
+[+] Downloading 'Music-Extended-Abknc' from apkmirror
+Request link: https://www.apkmirror.com/apk/google-inc/youtube-music/youtube-music-8-12-53-release
+Get Response: https://www.apkmirror.com/apk/google-inc/youtube-music/youtube-music-8-12-53-release
+[+] Get response from https://www.apkmirror.com/apk/google-inc/youtube-music/youtube-music-8-12-53-release
+1: len = 1635
+2: len = 1628
+3: len = 1638
+4: len = 1640
+5: len = 768
+6: len = 0
+all: Node: <div class="table-row headerFont">
+                        <div class="table-cell rowheight addseparator expand pad dowrap-break-all">
+                            <a class="accent_color" href="/apk/google-inc/youtube-music/youtube-music-8-12-53-release/youtube-music-8-12-53-3-android-apk-download/">
+                                <svg class="icon tag-icon">
+                                    <use xlink:href="#apkm-icon-tag"></use>
+                                </svg>
+                                8.12.53                            </a>
+                            <span class="apkm-badge">APK</span>
+
+                                <br>
+                            <br>
+                        </div>
+                        <div class="table-cell rowheight addseparator expand pad dowrap">x86_64</div>
+                        <div class="table-cell rowheight addseparator expand pad dowrap">Android 8.0+</div>
+                        <div class="table-cell rowheight addseparator expand pad dowrap">nodpi</div>
+                        <div class="table-cell rowheight addseparator expand pad dowrap">
+                            <a class="accent_color" data-google-interstitial="false" href="/apk/google-inc/youtube-music/youtube-music-8-12-53-release/youtube-music-8-12-53-3-android-apk-download/">
+                                <svg class="icon download-button-icon">
+                                    <use xlink:href="#apkm-icon-download"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+[-] Couldn't get link with condition: APK, dpi = nodpi, arch = all
+[-] Couldn't get link with condition: BUNDLE, dpi = nodpi, arch = all
+[-] ERROR: Could not download 'Music-Extended-Abknc' from apkmirror with version '8.12.53', arch 'all', dpi 'nodpi'
+[-] ERROR: Could not download 'Music-Extended-Abknc' with version '8.12.53', arch 'all', dpi 'nodpi', try download with each native version instead.
+[+] Downloading 'Music-Extended-Abknc' from apkmirror
+Request link: https://www.apkmirror.com/apk/google-inc/youtube-music/youtube-music-8-12-53-release
+Get Response: https://www.apkmirror.com/apk/google-inc/youtube-music/youtube-music-8-12-53-release
+[+] Get response from https://www.apkmirror.com/apk/google-inc/youtube-music/youtube-music-8-12-53-release
+1: len = 1635
+2: len = 1628
+3: len = 1638
+3: <div class="table-row headerFont">
+                        <div class="table-cell rowheight addseparator expand pad dowrap-break-all">
+                            <a class="accent_color" href="/apk/google-inc/youtube-music/youtube-music-8-12-53-release/youtube-music-8-12-53-2-android-apk-download/">
+                                <svg class="icon tag-icon">
+                                    <use xlink:href="#apkm-icon-tag"></use>
+                                </svg>
+                                8.12.53                            </a>
+                            <span class="apkm-badge">APK</span>
+
+                                <br>
+                            <br>
+                        </div>
+                        <div class="table-cell rowheight addseparator expand pad dowrap">arm64-v8a</div>
+                        <div class="table-cell rowheight addseparator expand pad dowrap">Android 8.0+</div>
+                        <div class="table-cell rowheight addseparator expand pad dowrap">nodpi</div>
+                        <div class="table-cell rowheight addseparator expand pad dowrap">
+                            <a class="accent_color" data-google-interstitial="false" href="/apk/google-inc/youtube-music/youtube-music-8-12-53-release/youtube-music-8-12-53-2-android-apk-download/">
+                                <svg class="icon download-button-icon">
+                                    <use xlink:href="#apkm-icon-download"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+4: len = 1640
+5: len = 768
+6: len = 0
+arm64-v8a: Node: <div class="table-row headerFont">
+                        <div class="table-cell rowheight addseparator expand pad dowrap-break-all">
+                            <a class="accent_color" href="/apk/google-inc/youtube-music/youtube-music-8-12-53-release/youtube-music-8-12-53-3-android-apk-download/">
+                                <svg class="icon tag-icon">
+                                    <use xlink:href="#apkm-icon-tag"></use>
+                                </svg>
+                                8.12.53                            </a>
+                            <span class="apkm-badge">APK</span>
+
+                                <br>
+                            <br>
+                        </div>
+                        <div class="table-cell rowheight addseparator expand pad dowrap">x86_64</div>
+                        <div class="table-cell rowheight addseparator expand pad dowrap">Android 8.0+</div>
+                        <div class="table-cell rowheight addseparator expand pad dowrap">nodpi</div>
+                        <div class="table-cell rowheight addseparator expand pad dowrap">
+                            <a class="accent_color" data-google-interstitial="false" href="/apk/google-inc/youtube-music/youtube-music-8-12-53-release/youtube-music-8-12-53-3-android-apk-download/">
+                                <svg class="icon download-button-icon">
+                                    <use xlink:href="#apkm-icon-download"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+[+] Get link for arm64-v8a
+[+] Get link: https://www.apkmirror.com/apk/google-inc/youtube-music/youtube-music-8-12-53-release/youtube-music-8-12-53-2-android-apk-download/
+Request link: https://www.apkmirror.com/apk/google-inc/youtube-music/youtube-music-8-12-53-release/youtube-music-8-12-53-2-android-apk-download/
+Get Response: https://www.apkmirror.com/apk/google-inc/youtube-music/youtube-music-8-12-53-release/youtube-music-8-12-53-2-android-apk-download/
+Get response from https://www.apkmirror.com/apk/google-inc/youtube-music/youtube-music-8-12-53-release/youtube-music-8-12-53-2-android-apk-download/
+[+] Requesting https://www.apkmirror.com/apk/google-inc/youtube-music/youtube-music-8-12-53-release/youtube-music-8-12-53-2-android-apk-download/download/?key=6d747de51d8d46f56e521b2779032f68738982ef&forcebaseapk=true
+Request link: https://www.apkmirror.com/apk/google-inc/youtube-music/youtube-music-8-12-53-release/youtube-music-8-12-53-2-android-apk-download/download/?key=6d747de51d8d46f56e521b2779032f68738982ef&forcebaseapk=true
+Get Response: https://www.apkmirror.com/apk/google-inc/youtube-music/youtube-music-8-12-53-release/youtube-music-8-12-53-2-android-apk-download/download/?key=6d747de51d8d46f56e521b2779032f68738982ef&forcebaseapk=true
+Exit crawling for file
+[+] Get download link: https://www.apkmirror.com/wp-content/themes/APKMirror/download.php?id=8822868&key=58f0dadd0865622a1cdebf8e0e72b80f67128eef&forcebaseapk=true
+https://www.apkmirror.com/wp-content/themes/APKMirror/download.php?id=8822868&key=58f0dadd0865622a1cdebf8e0e72b80f67128eef&forcebaseapk=true: Successfully get response
+[+] Downloading 'Music-Extended-Abknc' from apkmirror
+Request link: https://www.apkmirror.com/apk/google-inc/youtube-music/youtube-music-8-12-53-release
+curl: (22) The requested URL returned error: 429
+Get Response: https://www.apkmirror.com/apk/google-inc/youtube-music/youtube-music-8-12-53-release
+[+] Get response from https://www.apkmirror.com/apk/google-inc/youtube-music/youtube-music-8-12-53-release
+1: len = 0
+armeabi-v7a: Node:
+[+] Requesting
+Request link:
+curl: (3) URL using bad/illegal format or missing URL
+Get Response:
+Exit crawling for file
+[+] Get download link:
+curl: (3) URL using bad/illegal format or missing URL
+: Successfully get response
+[-] ERROR: Unable to download native version. The program will now abort.
+[+] Done
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$
