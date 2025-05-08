@@ -300,7 +300,7 @@ apk_mirror_search() {
 	local resp="$1" dpi="$2" arch="$3" apk_bundle="$4" node n
 	local apparch dlurl node app_table
 	if [ "$arch" = all ]; then
-		apparch=(universal noarch 'arm64-v8a + armeabi-v7a' 'arm64-v8a' 'armeabi-v7a')
+		apparch=(universal noarch 'arm64-v8a + armeabi-v7a')
 	else apparch=("$arch" universal noarch 'arm64-v8a + armeabi-v7a'); fi
 	for ((n = 1; n < 100; n++)); do
 		node=$($HTMLQ "div.table-row.headerFont:nth-last-child($n)" -r "span:nth-child(n+3)" <<<"$resp")
@@ -485,12 +485,6 @@ build_rv() {
 	local dl_from=${args[dl_from]}
 	local arch=${args[arch]}
 	local arch_f="${arch// /}"
-	
-	local arch_list=()
-	if [ "$arch" = "arm-v7a" ]; then arch="armeabi-v7a"; fi
-	if [ "$arch" = all ]; then
-		apparch=(universal noarch 'arm64-v8a + armeabi-v7a' 'arm64-v8a' 'armeabi-v7a')
-	else apparch=("$arch" universal noarch 'arm64-v8a + armeabi-v7a'); fi
 
 	local p_patcher_args=()
 	if [ "${args[excluded_patches]}" ]; then p_patcher_args+=("$(join_args "${args[excluded_patches]}" -d)"); fi
@@ -552,20 +546,40 @@ build_rv() {
 	version_f=${version_f#v}
 	local stock_apk="${TEMP_DIR}/${pkg_name}-${version_f}-${arch_f}.apk"
 	if [ ! -f "$stock_apk" ]; then
-		for dl_arch in $arch_list; do
-			for dl_p in archive apkmirror uptodown; do
-				if [ -z "${args[${dl_p}_dlurl]}" ]; then continue; fi
-				pr "Downloading '${table}' from ${dl_p}"
-				if ! isoneof $dl_p "${tried_dl[@]}"; then get_${dl_p}_resp "${args[${dl_p}_dlurl]}"; fi
-				if ! dl_${dl_p} "${args[${dl_p}_dlurl]}" "$version" "$stock_apk" "$dl_arch" "${args[dpi]}" "$get_latest_ver"; then
-					epr "ERROR: Could not download '${table}' from ${dl_p} with version '${version}', arch '${arch}', dpi '${args[dpi]}'"
-					continue
-				fi
-				break
-			done
-			if [[ $dl_arch == $arch || $dl_arch == 'universal' || $dl_arch == 'noarch' || $dl_arch == 'arm64-v8a + armeabi-v7a' ]]; then break;
+		for dl_p in archive apkmirror uptodown; do
+			if [ -z "${args[${dl_p}_dlurl]}" ]; then continue; fi
+			pr "Downloading '${table}' from ${dl_p}"
+			if ! isoneof $dl_p "${tried_dl[@]}"; then get_${dl_p}_resp "${args[${dl_p}_dlurl]}"; fi
+			if ! dl_${dl_p} "${args[${dl_p}_dlurl]}" "$version" "$stock_apk" "$arch" "${args[dpi]}" "$get_latest_ver"; then
+				epr "ERROR: Could not download '${table}' from ${dl_p} with version '${version}', arch '${arch}', dpi '${args[dpi]}'"
+				continue
+			fi
+			break
 		done
-		if [ ! -f "$stock_apk" ]; then return 0; fi
+		if [ ! -f "$stock_apk" ]; then 
+			if [[ $arch == "all" || $arch == "both" ]]; then
+				epr "ERROR: Could not download '${table}' with version '${version}', arch '${arch}', dpi '${args[dpi]}', try download with each native version instead."
+				for dl_arch in arm64-v8a armeabi-v7a; do
+					if [[ $arch == "armeabi-v7a" ]]; then arch_f="arm-v7a"; else arch_f=$dl_arch; done
+					stock_apk="${TEMP_DIR}/${pkg_name}-${version_f}-${arch_f}.apk"
+					for dl_p in archive apkmirror uptodown; do
+						if [ -z "${args[${dl_p}_dlurl]}" ]; then continue; fi
+						pr "Downloading '${table}' from ${dl_p}"
+						if ! isoneof $dl_p "${tried_dl[@]}"; then get_${dl_p}_resp "${args[${dl_p}_dlurl]}"; fi
+						if ! dl_${dl_p} "${args[${dl_p}_dlurl]}" "$version" "$stock_apk" "$arch" "${args[dpi]}" "$get_latest_ver"; then
+							epr "ERROR: Could not download '${table}' from ${dl_p} with version '${version}', arch '${arch}', dpi '${args[dpi]}'"
+							continue
+						else
+							break
+						fi
+					done
+					epr "ERROR: Unable to download native version. The program will now abort."
+					return 0;
+				done
+			else
+				return 0;
+			fi
+		fi
 	else
 		pr "Using existed file: $stock_apk" >&2
 	fi
