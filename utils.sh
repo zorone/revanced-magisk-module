@@ -339,7 +339,7 @@ dl_apkmirror() {
 			tmp=$($HTMLQ "div.table-row.headerFont:nth-last-child($i)" -r "span:nth-child(n+3)" <<<"$resp")
 			arr["$i"]=$tmp
 			echo >&2 "$i: len = ${#tmp}"
-			if [[ "$tmp" == *"<div class="table-cell rowheight addseparator expand pad dowrap">$arch</div>"*"<div class="table-cell rowheight addseparator expand pad dowrap">"*"</div>"*"<div class="table-cell rowheight addseparator expand pad dowrap">$dpi</div>"* ]]; then
+			if [[ "$tmp" == *"<div class=\"table-cell rowheight addseparator expand pad dowrap\">$arch</div>"*"<div class=\"table-cell rowheight addseparator expand pad dowrap\">"*"</div>"*"<div class=\"table-cell rowheight addseparator expand pad dowrap\">$dpi</div>"* ]]; then
 				echo "$i: ${arr[$i]}";
 			fi
 			i=`expr $i + 1`;
