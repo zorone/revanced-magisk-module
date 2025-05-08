@@ -340,8 +340,8 @@ dl_apkmirror() {
 			arr["$i"]=$tmp
 			echo "$i: len = ${#tmp}"
 			if [ sed -iq "$arch" <<<"$tmp" ] && [ grep -iq "$dpi" <<<"$tmp" ]; then
-				echo "${arr[$i]}"
-			done
+				echo "${arr[$i]}";
+			fi
 			i=$i+1;
 			[ ${#tmp} -gt 0 ]; do true;
 		done
