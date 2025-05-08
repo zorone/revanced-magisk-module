@@ -297,7 +297,7 @@ merge_splits() {
 
 # -------------------- apkmirror --------------------
 apk_mirror_search() {
-	local resp="$1" dpi="$2" arch="$3" apk_bundle="$4" node
+	local resp="$1" dpi="$2" arch="$3" apk_bundle="$4" node n
 	local apparch dlurl node app_table
 	if [ "$arch" = all ]; then
 		apparch=(universal noarch 'arm64-v8a + armeabi-v7a')
@@ -315,10 +315,10 @@ apk_mirror_search() {
 			return 0
 		fi
 	done
-	if [ -z "$node" ]; then
+	if [ -z "$node" && n -le 2 ]; then
 		epr "Couldn't find any node with CSS condition \"div.table-row.headerFont:nth-last-child(n)\" -r \"span:nth-child(n+3)\" " >&2
 		epr "More debugging info, see ${TEMP_DIR}/err.log" >&2
-		echo "RESP=$resp" > ${TEMP_DIR}/err.log
+		echo "RESP=\"$resp\"" > ${TEMP_DIR}/err.log
 	else
 		epr "Couldn't get link with condition: $apk_bundle, dpi = $dpi, arch = $arch" >&2
 	fi
