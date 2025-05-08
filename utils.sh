@@ -334,6 +334,17 @@ dl_apkmirror() {
 		url="${url}/${url##*/}-${version//./-}-release"
 		resp=$(req "$url" -) || return 1
 		pr "Get response from $url" >&2
+		i=1
+		while 
+			tmp="$(echo $res | htmlq "div.table-row.headerFont:nth-last-child($i)" -r "span:nth-child($i)")"
+			arr["$i"]=$tmp
+			echo "$i: len = ${#tmp}"
+			if [[ (sed -iq "$arch" <<<"$tmp") && (grep -iq "$dpi" <<<"$tmp") ]]; then
+				echo "${arr[$i]}"
+			done
+			i=$i+1;
+			[ ${#tmp} -gt 0 ]; do true;
+		done
 		node=$($HTMLQ "div.table-row.headerFont:nth-last-child(1)" -r "span:nth-child(n+3)" <<<"$resp")
 		echo "$arch: Node: $node"
 		if [ "$node" ]; then
