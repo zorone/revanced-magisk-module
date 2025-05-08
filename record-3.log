@@ -5102,3 +5102,9 @@ all: Node: <div class="table-row headerFont">
 [-] ERROR: Could not download 'Music-Extended-Abknc' from apkmirror with version '8.12.53', arch 'all', dpi 'nodpi'
 [+] Done
 zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$
+
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$ date
+Fri May  9 05:55:29 +07 2025
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$ ./build.sh
+utils.sh: line 566: syntax error near unexpected token `done'
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$
