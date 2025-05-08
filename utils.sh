@@ -336,13 +336,13 @@ dl_apkmirror() {
 		pr "Get response from $url" >&2
 		i=1
 		while 
-			tmp="$(htmlq "div.table-row.headerFont:nth-last-child($i)" -r "span:nth-child($i)" <<<"$resp")"
+			tmp=$($HTMLQ "div.table-row.headerFont:nth-last-child($i)" -r "span:nth-child($i+3)" <<<"$resp")
 			arr["$i"]=$tmp
 			echo "$i: len = ${#tmp}"
-			if [ $(sed -iq "$arch" <<<"$tmp" ) ] && [ $(sed -iq "$dpi" <<<"$tmp") ]; then
+			if [ $(sed -iq "$arch" <<<"$tmp") ] && [ $(sed -iq "$dpi" <<<"$tmp") ]; then
 				echo "${arr[$i]}";
 			fi
-			i=$i+1;
+			i+=1;
 			[ ${#tmp} -gt 0 ]; do true;
 		done
 		node=$($HTMLQ "div.table-row.headerFont:nth-last-child(1)" -r "span:nth-child(n+3)" <<<"$resp")
