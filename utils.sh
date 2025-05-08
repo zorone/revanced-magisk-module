@@ -339,7 +339,7 @@ dl_apkmirror() {
 			tmp=$($HTMLQ "div.table-row.headerFont:nth-last-child($i)" -r "span:nth-child(n+3)" <<<"$resp")
 			arr["$i"]=$tmp
 			echo >&2 "$i: len = ${#tmp}"
-			if [ $(sed -iq "$arch" <<< "$tmp") ] && [ $(sed -iq "$dpi" <<< "$tmp") ]; then
+			if [ $(echo "$tmp" | sed -iq "$arch") ] && [ $(echo "$tmp" | sed -iq "$dpi") ]; then
 				echo "${arr[$i]}";
 			fi
 			i=`expr $i + 1`;
