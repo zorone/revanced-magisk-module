@@ -336,9 +336,9 @@ dl_apkmirror() {
 		pr "Get response from $url" >&2
 		i=1
 		while 
-			tmp=$($HTMLQ "div.table-row.headerFont:nth-last-child($i)" -r "span:nth-child($i+3)" <<<"$resp")
+			tmp=$($HTMLQ "div.table-row.headerFont:nth-last-child($i)" -r "span:nth-child(n+3)" <<<"$resp")
 			arr["$i"]=$tmp
-			echo "$i: len = ${#tmp}"
+			echo >&2 "$i: len = ${#tmp}"
 			if [ $(sed -iq "$arch" <<<"$tmp") ] && [ $(sed -iq "$dpi" <<<"$tmp") ]; then
 				echo "${arr[$i]}";
 			fi
