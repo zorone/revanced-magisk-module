@@ -577,7 +577,7 @@ build_rv() {
 						epr "ERROR: Unable to download native version. The program will now abort."
 						return 0;
 					fi
-					sleep 5s
+					sleep 30s
 				done
 			else
 				return 0;
