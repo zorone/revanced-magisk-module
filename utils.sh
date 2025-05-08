@@ -570,6 +570,7 @@ build_rv() {
 							epr "ERROR: Could not download '${table}' from ${dl_p} with version '${version}', arch '${dl_arch}', dpi '${args[dpi]}'"
 							continue
 						else
+							sleep 5s
 							break
 						fi
 					done
@@ -577,7 +578,6 @@ build_rv() {
 						epr "ERROR: Unable to download native version. The program will now abort."
 						return 0;
 					fi
-					sleep 30s
 				done
 			else
 				return 0;
