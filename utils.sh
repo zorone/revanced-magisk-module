@@ -562,6 +562,7 @@ build_rv() {
 					continue
 				fi
 				break
+			done
 			if [[ $dl_arch == $arch || $dl_arch == 'universal' || $dl_arch == 'noarch' || $dl_arch == 'arm64-v8a + armeabi-v7a' ]]; then break;
 		done
 		if [ ! -f "$stock_apk" ]; then return 0; fi
