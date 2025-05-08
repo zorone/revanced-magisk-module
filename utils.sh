@@ -559,7 +559,9 @@ build_rv() {
 		if [ ! -f "$stock_apk" ]; then 
 			if [[ $arch == "all" || $arch == "both" ]]; then
 				epr "ERROR: Could not download '${table}' with version '${version}', arch '${arch}', dpi '${args[dpi]}', try download with each native version instead."
+				local i=0 get_file=0
 				for dl_arch in arm64-v8a armeabi-v7a; do
+					i=`expr $i + 1`
 					if [[ $dl_arch == "armeabi-v7a" ]]; then arch_f="arm-v7a"; else arch_f=$dl_arch; fi
 					stock_apk="${TEMP_DIR}/${pkg_name}-${version_f}-${arch_f}.apk"
 					for dl_p in archive apkmirror uptodown; do
@@ -570,11 +572,14 @@ build_rv() {
 							epr "ERROR: Could not download '${table}' from ${dl_p} with version '${version}', arch '${dl_arch}', dpi '${args[dpi]}'"
 							continue
 						else
+							get_file=`expr $get_file + 1`
 							break
 						fi
 					done
-					epr "ERROR: Unable to download native version. The program will now abort."
-					return 0;
+					if [[ $i != $get_file ]]; then
+						epr "ERROR: Unable to download native version. The program will now abort."
+						return 0;
+					fi
 				done
 			else
 				return 0;
