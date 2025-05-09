@@ -490,6 +490,7 @@ build_rv() {
 	if [ "${args[excluded_patches]}" ]; then p_patcher_args+=("$(join_args "${args[excluded_patches]}" -d)"); fi
 	if [ "${args[included_patches]}" ]; then p_patcher_args+=("$(join_args "${args[included_patches]}" -e)"); fi
 	[ "${args[exclusive_patches]}" = true ] && p_patcher_args+=("--exclusive")
+	pr "Start '${table}'. version: '${version}', arch: '${arch}', dpi: '${args[dpi]}'"
 
 	local tried_dl=()
 	for dl_p in archive apkmirror uptodown; do
@@ -561,7 +562,7 @@ build_rv() {
 				epr "ERROR: Could not download '${table}' with version '${version}', arch '${arch}', dpi '${args[dpi]}', try download with each native version instead."
 				return 0;
 			else
-				epr "ERROR: Could not download '${table}' with version '${version}', arch '${arch}', dpi '${args[dpi]}'."
+				epr "ERROR: Could not download '${table}' with version '${version}', arch '${arch}', dpi '${args[dpi]}'"
 				return 1;
 			fi
 		fi
