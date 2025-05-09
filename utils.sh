@@ -490,7 +490,11 @@ build_rv() {
 	if [ "${args[excluded_patches]}" ]; then p_patcher_args+=("$(join_args "${args[excluded_patches]}" -d)"); fi
 	if [ "${args[included_patches]}" ]; then p_patcher_args+=("$(join_args "${args[included_patches]}" -e)"); fi
 	[ "${args[exclusive_patches]}" = true ] && p_patcher_args+=("--exclusive")
-	pr "Start '${table}'. version: '${version}', arch: '${arch}', dpi: '${args[dpi]}'"
+	if [ -z $version ]; then
+		pr "Start '${table}'. version: '${version_mode}', arch: '${arch}', dpi: '${args[dpi]}'"
+	else
+		pr "Start '${table}'. version: '${version}', arch: '${arch}', dpi: '${args[dpi]}'"
+	fi
 
 	local tried_dl=()
 	for dl_p in archive apkmirror uptodown; do

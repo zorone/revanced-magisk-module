@@ -6425,3 +6425,11 @@ all: Node: <div class="table-row headerFont">
 [-] ERROR: Could not download 'Music-Extended-Abknc' with version '8.12.53', arch 'all', dpi 'nodpi', try download with each native version instead.
 [+] Done
 zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$
+
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$ date
+Fri May  9 13:56:33 +07 2025
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$ ./build.sh
+[+] You are building locally. Magisk updates will not be enabled.
+./build.sh: line 51: "$TEMP_DIR"/*-rv/changelog.md: ambiguous redirect
+./build.sh: line 147: conditional binary operator expected
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$
