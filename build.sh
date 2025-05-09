@@ -146,7 +146,7 @@ for table_name in $(toml_get_table_names); do
 		build_rv "$(declare -p app_args)" & build_pid=$!
 
 		wait $build_pid
-		cat $TEMP_DIR/build_state | read -r build_status
+		build_status=$(< $TEMP_DIR/build_state)
 		echo "Get return code: $build_status"
 	fi
 	if [ "${app_args[arch]}" = both ]; then
