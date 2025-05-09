@@ -505,7 +505,7 @@ build_rv() {
 	done
 	if [ -z "$pkg_name" ]; then
 		epr "empty pkg name, not building ${table}."
-		return 0
+		return 1
 	fi
 	local list_patches
 	list_patches=$(java -jar "$rv_cli_jar" list-patches "$rv_patches_jar" -f "$pkg_name" -v -p 2>&1)
@@ -530,7 +530,7 @@ build_rv() {
 	fi
 	if [ -z "$version" ]; then
 		epr "empty version, not building ${table}."
-		return 0
+		return 1
 	fi
 
 	if [ "$mode_arg" = module ]; then
@@ -559,6 +559,9 @@ build_rv() {
 		if [ ! -f "$stock_apk" ]; then 
 			if [[ $arch == "all" ]]; then
 				epr "ERROR: Could not download '${table}' with version '${version}', arch '${arch}', dpi '${args[dpi]}', try download with each native version instead."
+				return 0;
+			else
+				epr "ERROR: Could not download '${table}' with version '${version}', arch '${arch}', dpi '${args[dpi]}'."
 				return 1;
 			fi
 		fi
@@ -624,7 +627,7 @@ build_rv() {
 		if [ "${NORB:-}" != true ] || [ ! -f "$patched_apk" ]; then
 			if ! patch_apk "$stock_apk" "$patched_apk" "${patcher_args[*]}" "${args[cli]}" "${args[ptjar]}"; then
 				epr "Building '${table}' failed!"
-				return 0
+				return 1
 			fi
 		fi
 		if [ "$build_mode" = apk ]; then
@@ -655,6 +658,7 @@ build_rv() {
 		zip -"$COMPRESSION_LEVEL" -FSqr "${file_output_path}" .
 		popd >/dev/null || :
 		pr "Built ${table} (root): '${file_output}'"
+		return 0
 	done
 }
 
