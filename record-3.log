@@ -7723,3 +7723,108 @@ all: Node: <div class="table-row headerFont">
 [-] ERROR: Could not download 'Music-Extended-Abknc' from apkmirror with version '8.12.53', arch 'all', dpi 'nodpi'
 [-] ERROR: Could not download 'Music-Extended-Abknc' with version '8.12.53', arch 'all', dpi 'nodpi', try download with each native version instead.
 zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$
+
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$ ( sleep 5; exit 4 ) & b1_pid=$!
+( sleep 5; exit 21 ) & b2_pid=$!
+
+# More code
+
+wait $b1_pid
+b1_exit=$?
+wait $b2_pid
+b2_exit=$?
+[1] 100369
+[2] 100370
+[1]-  Exit 4                  ( sleep 5; exit 4 )
+[2]+  Exit 21                 ( sleep 5; exit 21 )
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$ ( sleep 5; exit 4 ) & b1_pid=$!
+( sleep 5; exit 21 ) & b2_pid=$!
+
+# More code
+
+wait $b1_pid
+b1_exit=$?
+wait $b2_pid
+b2_exit=$?
+[1] 100653
+[2] 100654
+[1]-  Exit 4                  ( sleep 5; exit 4 )
+[2]+  Exit 21                 ( sleep 5; exit 21 )
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$ ( sleep 5; exit 4 ) & b1_pid=$!
+( sleep 3; exit 21 ) & b2_pid=$!
+
+# More code
+
+wait $b1_pid
+b1_exit=$?
+wait $b2_pid
+b2_exit=$?
+echo "b1 exit with $b1_exit, and b2 exit with $b2_exit"
+[1] 101228
+[2] 101229
+[1]-  Exit 4                  ( sleep 5; exit 4 )
+[2]+  Exit 21                 ( sleep 3; exit 21 )
+b1 exit with 4, and b2 exit with 21
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$ ( sleep 5; exit 4 ) & b1_pid=$!
+( sleep 3; exit 21 ) & b2_pid=$!
+( sleep 2; exit 15 ) & b3_pid=$!
+
+# More code
+b3_exit=$?
+wait $b1_pid
+b1_exit=$?
+wait $b2_pid
+b2_exit=$?
+echo "b1 exit with $b1_exit, b2 exit with $b2_exit, and b3 exit with $b3_exit"
+[1] 101964
+[2] 101965
+[3] 101966
+[1]   Exit 4                  ( sleep 5; exit 4 )
+[2]-  Exit 21                 ( sleep 3; exit 21 )
+[3]+  Exit 15                 ( sleep 2; exit 15 )
+b1 exit with 4, b2 exit with 21, and b3 exit with 0
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$ ( sleep 5; exit 4 ) & b1_pid=$!
+( sleep 3; exit 21 ) & b2_pid=$!
+( sleep 2; exit 15 ) & b3_pid=$!
+
+# More code
+wait $b1_pid
+b1_exit=$?
+wait $b2_pid
+b2_exit=$?
+b3_exit=$?
+echo "b1 exit with $b1_exit, b2 exit with $b2_exit, and b3 exit with $b3_exit"
+[1] 102222
+[2] 102223
+[3] 102224
+[1]   Exit 4                  ( sleep 5; exit 4 )
+[2]-  Exit 21                 ( sleep 3; exit 21 )
+[3]+  Exit 15                 ( sleep 2; exit 15 )
+b1 exit with 4, b2 exit with 21, and b3 exit with 0
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$ ( sleep 5; exit 4 ) & b1_pid=$!
+( sleep 3; exit 21 ) & b2_pid=$!
+( sleep 2; exit 15 ) & b3_pid=$!
+( sleep 4; exit 7 ) & b4_pid=$!
+
+# More code
+wait $b1_pid
+b1_exit=$?
+wait $b2_pid
+b2_exit=$?
+wait -p
+b3_exit=$?
+wait -n
+b4_exit=$?
+echo "b1 exit with $b1_exit, b2 exit with $b2_exit,  b3 exit with $b3_exit, and b4 exit with $b4_exit"
+[1] 102900
+[2] 102901
+[3] 102902
+[4] 102903
+[1]   Exit 4                  ( sleep 5; exit 4 )
+[2]   Exit 21                 ( sleep 3; exit 21 )
+[3]-  Exit 15                 ( sleep 2; exit 15 )
+[4]+  Exit 7                  ( sleep 4; exit 7 )
+-bash: wait: -p: option requires an argument
+wait: usage: wait [-fn] [-p var] [id ...]
+b1 exit with 4, b2 exit with 21,  b3 exit with 2, and b4 exit with 127
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$
