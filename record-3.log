@@ -7510,3 +7510,101 @@ Get Response: https://www.apkmirror.com/apk/google-inc/youtube-music/youtube-mus
 [-] ERROR: Could not download 'Music-Extended-Abknc' from apkmirror with version '8.12.53', arch 'all', dpi 'nodpi'
 [-] ERROR: Could not download 'Music-Extended-Abknc' with version '8.12.53', arch 'all', dpi 'nodpi', try download with each native version instead.
 zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$
+
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$ date
+Fri May  9 15:42:31 +07 2025
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$ ./build.sh
+[+] You are building locally. Magisk updates will not be enabled.
+./build.sh: line 51: "$TEMP_DIR"/*-rv/changelog.md: ambiguous redirect
+[+] Getting prebuilts (anddea)
+Request link: https://api.github.com/repos/inotia00/revanced-cli/releases/latest
+Get Response: https://api.github.com/repos/inotia00/revanced-cli/releases/latest
+Request link: https://api.github.com/repos/anddea/revanced-patches/releases/latest
+Get Response: https://api.github.com/repos/anddea/revanced-patches/releases/latest
+
+[+] Start 'Music-Extended-Abknc'. version: 'auto', arch: 'all', dpi: 'nodpi'
+Request link: https://www.apkmirror.com/apk/google-inc/youtube-music
+Get Response: https://www.apkmirror.com/apk/google-inc/youtube-music
+[+] Choosing version '8.12.53' for Music-Extended-Abknc
+[+] Downloading 'Music-Extended-Abknc' from apkmirror
+Request link: https://www.apkmirror.com/apk/google-inc/youtube-music/youtube-music-8-12-53-release
+Get Response: https://www.apkmirror.com/apk/google-inc/youtube-music/youtube-music-8-12-53-release
+[+] Get response from https://www.apkmirror.com/apk/google-inc/youtube-music/youtube-music-8-12-53-release
+1: len = 1635
+2: len = 1628
+3: len = 1638
+4: len = 1640
+5: len = 768
+6: len = 0
+[-] Couldn't get link with condition: APK, dpi = nodpi, arch = all
+[-] Couldn't get link with condition: BUNDLE, dpi = nodpi, arch = all
+[-] ERROR: Could not download 'Music-Extended-Abknc' from apkmirror with version '8.12.53', arch 'all', dpi 'nodpi'
+[-] ERROR: Could not download 'Music-Extended-Abknc' with version '8.12.53', arch 'all', dpi 'nodpi', try download with each native version instead.
+Get return code: all: Node: <div class="table-row headerFont">
+                        <div class="table-cell rowheight addseparator expand pad dowrap-break-all">
+                            <a class="accent_color" href="/apk/google-inc/youtube-music/youtube-music-8-12-53-release/youtube-music-8-12-53-3-android-apk-download/">
+                                <svg class="icon tag-icon">
+                                    <use xlink:href="#apkm-icon-tag"></use>
+                                </svg>
+                                8.12.53                            </a>
+                            <span class="apkm-badge">APK</span>
+
+                                <br>
+                            <br>
+                        </div>
+                        <div class="table-cell rowheight addseparator expand pad dowrap">x86_64</div>
+                        <div class="table-cell rowheight addseparator expand pad dowrap">Android 8.0+</div>
+                        <div class="table-cell rowheight addseparator expand pad dowrap">nodpi</div>
+                        <div class="table-cell rowheight addseparator expand pad dowrap">
+                            <a class="accent_color" data-google-interstitial="false" href="/apk/google-inc/youtube-music/youtube-music-8-12-53-release/youtube-music-8-12-53-3-android-apk-download/">
+                                <svg class="icon download-button-icon">
+                                    <use xlink:href="#apkm-icon-download"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+2
+[+] Start 'Music-Extended-Abknc'. version: 'auto', arch: 'all', dpi: 'nodpi'
+Request link: https://www.apkmirror.com/apk/google-inc/youtube-music
+Get Response: https://www.apkmirror.com/apk/google-inc/youtube-music
+[+] Choosing version '8.12.53' for Music-Extended-Abknc
+[+] Downloading 'Music-Extended-Abknc' from apkmirror
+Request link: https://www.apkmirror.com/apk/google-inc/youtube-music/youtube-music-8-12-53-release
+Get Response: https://www.apkmirror.com/apk/google-inc/youtube-music/youtube-music-8-12-53-release
+[+] Get response from https://www.apkmirror.com/apk/google-inc/youtube-music/youtube-music-8-12-53-release
+1: len = 1635
+2: len = 1628
+3: len = 1638
+4: len = 1640
+5: len = 768
+6: len = 0
+all: Node: <div class="table-row headerFont">
+                        <div class="table-cell rowheight addseparator expand pad dowrap-break-all">
+                            <a class="accent_color" href="/apk/google-inc/youtube-music/youtube-music-8-12-53-release/youtube-music-8-12-53-3-android-apk-download/">
+                                <svg class="icon tag-icon">
+                                    <use xlink:href="#apkm-icon-tag"></use>
+                                </svg>
+                                8.12.53                            </a>
+                            <span class="apkm-badge">APK</span>
+
+                                <br>
+                            <br>
+                        </div>
+                        <div class="table-cell rowheight addseparator expand pad dowrap">x86_64</div>
+                        <div class="table-cell rowheight addseparator expand pad dowrap">Android 8.0+</div>
+                        <div class="table-cell rowheight addseparator expand pad dowrap">nodpi</div>
+                        <div class="table-cell rowheight addseparator expand pad dowrap">
+                            <a class="accent_color" data-google-interstitial="false" href="/apk/google-inc/youtube-music/youtube-music-8-12-53-release/youtube-music-8-12-53-3-android-apk-download/">
+                                <svg class="icon download-button-icon">
+                                    <use xlink:href="#apkm-icon-download"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+[-] Couldn't get link with condition: APK, dpi = nodpi, arch = all
+[-] Couldn't get link with condition: BUNDLE, dpi = nodpi, arch = all
+[-] ERROR: Could not download 'Music-Extended-Abknc' from apkmirror with version '8.12.53', arch 'all', dpi 'nodpi'
+[-] ERROR: Could not download 'Music-Extended-Abknc' with version '8.12.53', arch 'all', dpi 'nodpi', try download with each native version instead.
+2
+[+] Done
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$
