@@ -2,7 +2,7 @@
 
 set -euo pipefail
 shopt -s nullglob
-trap "rm -rf temp/*tmp.* temp/*/*tmp.* temp/*-temporary-files; exit 130" INT
+trap "rm -rf temp/*tmp.* temp/*/*tmp.* temp/*-temporary-files temp/build_state; exit 130" INT
 
 if [ "${1-}" = "clean" ]; then
 	rm -rf temp build logs build.md
@@ -146,6 +146,7 @@ for table_name in $(toml_get_table_names); do
 		build_rv "$(declare -p app_args)" & build_pid=$!
 
 		wait $build_pid
+		build_status < $TEMP_DIR/build_state
 		echo "Get return code: $build_status"
 	fi
 	if [ "${app_args[arch]}" = both ]; then
