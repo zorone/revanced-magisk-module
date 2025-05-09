@@ -8044,3 +8044,206 @@ all: Node: <div class="table-row headerFont">
 [-] ERROR: Could not download 'Music-Extended-Abknc' from apkmirror with version '8.12.53', arch 'all', dpi 'nodpi'
 [-] ERROR: Could not download 'Music-Extended-Abknc' with version '8.12.53', arch 'all', dpi 'nodpi', try download with each native version instead.
 zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$
+
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$ ls -l > pipe1
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$ cat < pipe
+-bash: pipe: No such file or directory
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$ cat < pipe1
+total 2516
+-rwxrwxrwx 1 zorone zorone    3148 May  5 14:52 CONFIG.md
+-rwxrwxrwx 1 zorone zorone   35149 May  5 14:52 LICENSE
+-rwxrwxrwx 1 zorone zorone    2279 May  5 14:52 README.md
+drwxrwxrwx 1 zorone zorone    4096 May  5 14:52 bin
+drwxrwxrwx 1 zorone zorone    4096 May  9 13:18 build
+-rwxrwxrwx 1 zorone zorone    2775 May  5 14:52 build-termux.sh
+-rwxrwxrwx 1 zorone zorone       0 May  9 16:32 build.md
+-rwxrwxrwx 1 zorone zorone    8645 May  9 16:35 build.sh
+-rwxrwxrwx 1 zorone zorone    6270 May  9 15:34 config.toml
+-rwxrwxrwx 1 zorone zorone  364705 May  7 06:20 err.log
+-rwxrwxrwx 1 zorone zorone    3708 May  5 14:52 ks.keystore
+-rwxrwxrwx 1 zorone zorone       0 May  9 16:40 pipe1
+-rwxrwxrwx 1 zorone zorone   43661 May  5 16:55 record-1.log
+-rwxrwxrwx 1 zorone zorone 1239977 May  5 20:13 record-2.log
+-rwxrwxrwx 1 zorone zorone  816470 May  9 16:33 record-3.log
+drwxrwxrwx 1 zorone zorone    4096 May  5 14:52 revanced-magisk
+-rwxrwxrwx 1 zorone zorone     457 May  5 14:52 sig.txt
+drwxrwxrwx 1 zorone zorone    4096 May  9 16:32 temp
+-rwxrwxrwx 1 zorone zorone   24907 May  9 16:34 utils.sh
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$ cat < pipe1
+total 2516
+-rwxrwxrwx 1 zorone zorone    3148 May  5 14:52 CONFIG.md
+-rwxrwxrwx 1 zorone zorone   35149 May  5 14:52 LICENSE
+-rwxrwxrwx 1 zorone zorone    2279 May  5 14:52 README.md
+drwxrwxrwx 1 zorone zorone    4096 May  5 14:52 bin
+drwxrwxrwx 1 zorone zorone    4096 May  9 13:18 build
+-rwxrwxrwx 1 zorone zorone    2775 May  5 14:52 build-termux.sh
+-rwxrwxrwx 1 zorone zorone       0 May  9 16:32 build.md
+-rwxrwxrwx 1 zorone zorone    8645 May  9 16:35 build.sh
+-rwxrwxrwx 1 zorone zorone    6270 May  9 15:34 config.toml
+-rwxrwxrwx 1 zorone zorone  364705 May  7 06:20 err.log
+-rwxrwxrwx 1 zorone zorone    3708 May  5 14:52 ks.keystore
+-rwxrwxrwx 1 zorone zorone       0 May  9 16:40 pipe1
+-rwxrwxrwx 1 zorone zorone   43661 May  5 16:55 record-1.log
+-rwxrwxrwx 1 zorone zorone 1239977 May  5 20:13 record-2.log
+-rwxrwxrwx 1 zorone zorone  816470 May  9 16:33 record-3.log
+drwxrwxrwx 1 zorone zorone    4096 May  5 14:52 revanced-magisk
+-rwxrwxrwx 1 zorone zorone     457 May  5 14:52 sig.txt
+drwxrwxrwx 1 zorone zorone    4096 May  9 16:32 temp
+-rwxrwxrwx 1 zorone zorone   24907 May  9 16:34 utils.sh
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$ echo -n x | cat - pipe1 > pipe2 &
+cat <pipe2 > pipe1
+[1] 112058
+-bash: pipe2: No such file or directory
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$ cat < pipe2 > pipe1
+[1]+  Done                    echo -n x | cat - pipe1 > pipe2
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$ cat <pipe2 > pipe1
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$ echo -n x | cat - pipe1 > pipe2 &
+[1] 112202
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$ cat <pipe2 > pipe1
+[1]+  Done                    echo -n x | cat - pipe1 > pipe2
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$ top
+top - 16:42:02 up  3:29,  1 user,  load average: 0.01, 0.06, 0.07
+Tasks:  60 total,   1 running,  59 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.1 us,  0.0 sy,  0.0 ni, 99.9 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+MiB Mem :   7806.5 total,   6298.3 free,   1225.9 used,    282.3 buff/cache
+MiB Swap:      0.0 total,      0.0 free,      0.0 used.   6346.1 avail Mem
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+    424 zorone    20   0  168784   3400     16 S   0.0   0.0   0:00.00 (sd-pam)
+    429 zorone    20   0    6120   5056   3412 S   0.0   0.1   0:00.01 bash
+    544 root      20   0    2784    212     80 S   0.0   0.0   0:00.00 SessionLeader
+    545 root      20   0    2784    224     80 S   0.0   0.0   0:00.00 Relay(546)
+    546 zorone    20   0    2892    960    856 S   0.0   0.0   0:00.00 sh
+    547 zorone    20   0    2892    952    856 S   0.0   0.0   0:00.00 sh
+    553 zorone    20   0    2892    956    860 S   0.0   0.0   0:00.00 sh
+    557 zorone    20   0   11.3g 109492  46360 S   0.0   1.4   0:19.09 node
+    569 root      20   0    2788    212     80 S   0.0   0.0   0:00.00 SessionLeader
+    570 root      20   0    2788    228     80 S   0.0   0.0   0:01.52 Relay(571)
+    571 zorone    20   0  997396  54412  38724 S   0.0   0.7   0:03.53 node
+    578 root      20   0    2788    212     80 S   0.0   0.0   0:00.00 SessionLeader
+    579 root      20   0    2788    228     80 S   0.0   0.0   0:06.91 Relay(580)
+    580 zorone    20   0  996180  55544  38636 S   0.0   0.7   0:15.94 node
+    605 zorone    20   0   31.3g 197504  54080 S   0.0   2.5   4:10.70 node
+    650 zorone    20   0   11.2g  67812  43072 S   0.0   0.8   0:07.01 node
+    663 zorone    20   0   11.0g  75600  43644 S   0.0   0.9   0:11.67 node
+    689 zorone    20   0  994548  54556  40388 S   0.0   0.7   0:00.59 node
+    729 root      20   0    2784    212     80 S   0.0   0.0   0:00.00 SessionLeader
+    730 root      20   0    2784    224     80 S   0.0   0.0   0:00.01 Relay(731)
+    731 zorone    20   0    2892    968    872 S   0.0   0.0   0:00.00 sh
+    733 zorone    20   0    2892   1692   1588 S   0.0   0.0   0:00.00 sh
+    744 zorone    20   0  991744  48880  40380 S   0.0   0.6   0:00.12 node
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$ ^C
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$ ^C
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$ echo -n x | cat - pipe1 > pipe2 &
+cat <pipe2 > pipe1
+[1] 112855
+[1]+  Done                    echo -n x | cat - pipe1 > pipe2
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$ top
+top - 16:43:32 up  3:31,  1 user,  load average: 0.00, 0.04, 0.07
+Tasks:  60 total,   1 running,  59 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.0 us,  0.0 sy,  0.0 ni,100.0 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+MiB Mem :   7806.5 total,   6293.6 free,   1230.4 used,    282.5 buff/cache
+MiB Swap:      0.0 total,      0.0 free,      0.0 used.   6341.6 avail Mem
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+    244 root      20   0    3192   1112   1024 S   0.0   0.0   0:00.00 agetty
+    250 root      20   0  107248  21064  12892 S   0.0   0.3   0:00.03 unattended-upgr
+    320 root      20   0 2311248 107848  48052 S   0.0   1.3   0:15.23 python3.10
+    382 root      20   0    2804    208     80 S   0.0   0.0   0:00.00 SessionLeader
+    383 root      20   0    2804    220     80 S   0.0   0.0   0:00.23 Relay(384)
+    384 zorone    20   0    6868   5892   3444 S   0.0   0.1   0:00.16 bash
+    385 root      20   0    7524   4972   4056 S   0.0   0.1   0:00.00 login
+    423 zorone    20   0   16924   9196   7612 S   0.0   0.1   0:00.03 systemd
+    424 zorone    20   0  168784   3400     16 S   0.0   0.0   0:00.00 (sd-pam)
+    429 zorone    20   0    6120   5056   3412 S   0.0   0.1   0:00.01 bash
+    441 root      20   0   44132  37748  10320 S   0.0   0.5   1:00.03 python3
+    544 root      20   0    2784    212     80 S   0.0   0.0   0:00.00 SessionLeader
+    545 root      20   0    2784    224     80 S   0.0   0.0   0:00.00 Relay(546)
+    546 zorone    20   0    2892    960    856 S   0.0   0.0   0:00.00 sh
+    547 zorone    20   0    2892    952    856 S   0.0   0.0   0:00.00 sh
+    553 zorone    20   0    2892    956    860 S   0.0   0.0   0:00.00 sh
+    557 zorone    20   0   11.3g 109756  46360 S   0.0   1.4   0:19.14 node
+    569 root      20   0    2788    212     80 S   0.0   0.0   0:00.00 SessionLeader
+    570 root      20   0    2788    228     80 S   0.0   0.0   0:01.53 Relay(571)
+    571 zorone    20   0  997396  54412  38724 S   0.0   0.7   0:03.54 node
+    578 root      20   0    2788    212     80 S   0.0   0.0   0:00.00 SessionLeader
+    579 root      20   0    2788    228     80 S   0.0   0.0   0:06.91 Relay(580)
+    580 zorone    20   0  996180  54704  38636 S   0.0   0.7   0:15.95 node
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$ ps
+    PID TTY          TIME CMD
+    384 pts/0    00:00:00 bash
+ 113108 pts/0    00:00:00 ps
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$ proc
+Command 'proc' not found, did you mean:
+  command 'nproc' from deb coreutils (8.32-4.1ubuntu1.2)
+  command 'pro' from deb ubuntu-pro-client (34~22.04)
+  command 'proj' from deb proj-bin (8.2.1-1)
+  command 'phoc' from deb phoc (0.13.1-2)
+Try: sudo apt install <deb name>
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$ ^C
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$ ls
+CONFIG.md  bin              build.md     err.log      pipe2         record-3.log     temp
+LICENSE    build            build.sh     ks.keystore  record-1.log  revanced-magisk  utils.sh
+README.md  build-termux.sh  config.toml  pipe1        record-2.log  sig.txt
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$ rm pipe1 pipe2
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$ mkfifo pipe1
+mkfifo: cannot create fifo 'pipe1': Operation not supported
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$ mkfifo pipe1
+mkfifo: cannot create fifo 'pipe1': Operation not supported
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$ mkfifo backPipe
+mkfifo: cannot create fifo 'backPipe': Operation not supported
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$ mkfifo
+mkfifo: missing operand
+Try 'mkfifo --help' for more information.
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$ mkfifo --help
+Usage: mkfifo [OPTION]... NAME...
+Create named pipes (FIFOs) with the given NAMEs.
+
+Mandatory arguments to long options are mandatory for short options too.
+  -m, --mode=MODE    set file permission bits to MODE, not a=rw - umask
+  -Z                   set the SELinux security context to default type
+      --context[=CTX]  like -Z, or if CTX is specified then set the SELinux
+                         or SMACK security context to CTX
+      --help     display this help and exit
+      --version  output version information and exit
+
+GNU coreutils online help: <https://www.gnu.org/software/coreutils/>
+Report any translation bugs to <https://translationproject.org/team/>
+Full documentation <https://www.gnu.org/software/coreutils/mkfifo>
+or available locally via: info '(coreutils) mkfifo invocation'
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$ mkfifo pipe1
+mkfifo: cannot create fifo 'pipe1': Operation not supported
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$ mkfifo pipe2
+mkfifo: cannot create fifo 'pipe2': Operation not supported
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$ mkfifo pipe3
+mkfifo: cannot create fifo 'pipe3': Operation not supported
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$ mkfifo pipe4
+mkfifo: cannot create fifo 'pipe4': Operation not supported
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$ mkfifo pipe5
+mkfifo: cannot create fifo 'pipe5': Operation not supported
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$ cd /
+zorone@DESKTOP-8HV03R6:/$ mkfifo backPipe
+mkfifo: cannot create fifo 'backPipe': Permission denied
+zorone@DESKTOP-8HV03R6:/$ sudo mkfifo backPipe
+[sudo] password for zorone:
+zorone@DESKTOP-8HV03R6:/$ ls
+Docker    boot  home  lib32   lost+found  opt   run   srv  usr        wslIeEaJL  wsliKacJL  wsllFDedf
+backPipe  dev   init  lib64   media       proc  sbin  sys  var        wslOnFDPf  wslicbIGL
+bin       etc   lib   libx32  mnt         root  snap  tmp  wslFMjlIL  wslfenmdf  wsljICApe
+zorone@DESKTOP-8HV03R6:/$ rm backPipe
+rm: remove write-protected fifo 'backPipe'? y
+rm: cannot remove 'backPipe': Permission denied
+zorone@DESKTOP-8HV03R6:/$ sudo rm backPipe
+zorone@DESKTOP-8HV03R6:/$ mkfifo backPipe
+mkfifo: cannot create fifo 'backPipe': Permission denied
+zorone@DESKTOP-8HV03R6:/$ cd ~
+zorone@DESKTOP-8HV03R6:~$ cd -
+/
+zorone@DESKTOP-8HV03R6:/$ cd -
+/home/zorone
+zorone@DESKTOP-8HV03R6:~$ cd -
+/
+zorone@DESKTOP-8HV03R6:/$ cd -
+/home/zorone
+zorone@DESKTOP-8HV03R6:~$ cd /mnt/c/git/revanced-magisk-module/
+zorone@DESKTOP-8HV03R6:/mnt/c/git/revanced-magisk-module$
