@@ -142,6 +142,11 @@ for table_name in $(toml_get_table_names); do
 	}
 
 	if [ "${app_args[arch]}" = both ]; then
+		idx=$((idx + 1))
+		build_rv "$(declare -p app_args)" &
+		if [[ $(wait -n) -eq 0 ]]; then continue; fi
+	fi
+	if [ "${app_args[arch]}" = both ]; then
 		app_args[table]="$table_name (arm64-v8a)"
 		app_args[arch]="arm64-v8a"
 		app_args[module_prop_name]="${app_args[module_prop_name]}-arm64"
