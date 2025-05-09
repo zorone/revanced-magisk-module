@@ -145,7 +145,7 @@ for table_name in $(toml_get_table_names); do
 		idx=$((idx + 1))
 		build_rv "$(declare -p app_args)" & build_pid=$!
 
-		wait $build_pid
+		wait -n $build_pid
 		build_status=$(< $TEMP_DIR/build_state)
 		echo "Get return code: $build_status"
 	fi
