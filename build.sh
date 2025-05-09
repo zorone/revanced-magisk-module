@@ -146,7 +146,7 @@ for table_name in $(toml_get_table_names); do
 		build_rv "$(declare -p app_args)" &
 		wait -n
 		echo "Get return code: $?"
-		if [[ $? -ne 2 ]]; then continue; fi
+		if [ $? -ne 2 ]; then continue; fi
 		app_args[arch]="both"
 	fi
 	if [ "${app_args[arch]}" = both ]; then
