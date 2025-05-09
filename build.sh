@@ -148,6 +148,7 @@ for table_name in $(toml_get_table_names); do
 		wait -n $build_pid
 		build_status=$(< $TEMP_DIR/build_state)
 		echo "Get return code: $build_status"
+		if [[ $build_status == "NO_ARCH_ALL" ]]; then $app_args[arch]=both; fi
 	fi
 	if [ "${app_args[arch]}" = both ]; then
 		app_args[table]="$table_name (arm64-v8a)"
