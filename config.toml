@@ -9,7 +9,7 @@ parallel-jobs = 1
 # patches-version = "v3.0.0-dev.4"
 
 [YouTube]
-enabled = false
+enabled = true
 build-mode = "both"
 excluded-patches = ""
 included-patches = ""
@@ -19,7 +19,7 @@ uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.youtube"
 
 [Music]
-enabled = false
+enabled = true
 build-mode = "both"
 arch = "both"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music"
@@ -27,7 +27,7 @@ uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.apps.youtube.music"
 
 [GooglePhotos]
-enabled = false
+enabled = true
 build-mode = "both"
 arch = "both"
 version = "auto"
@@ -36,7 +36,7 @@ uptodown-dlurl = "https://google-photos.en.uptodown.com/android"
 
 # dont build on gh actions (https://github.com/j-hc/revanced-magisk-module/issues/554)
 [Music-Extended]
-enabled = false
+enabled = true
 app-name = "Music"
 patches-source = "inotia00/revanced-patches"
 cli-source = "inotia00/revanced-cli"
@@ -47,7 +47,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.apps.youtube.music"
 
 [YouTube-Extended]
-enabled = false
+enabled = true
 app-name = "YouTube"
 patches-source = "inotia00/revanced-patches"
 cli-source = "inotia00/revanced-cli"
@@ -57,7 +57,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.youtube"
 
 [Youtube-Extended-Abknc]
-enabled = false
+enabled = true
 app-name = "RVX YouTube"
 patches-source = "anddea/revanced-patches"
 cli-source = "inotia00/revanced-cli"
