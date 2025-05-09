@@ -142,16 +142,12 @@ for table_name in $(toml_get_table_names); do
 	}
 
 	if [ "${app_args[arch]}" = all ]; then
-		echo "Start task with 'all' condition"
 		idx=$((idx + 1))
 		build_rv "$(declare -p app_args)" &
 		wait -n
 		echo "Get return code: $?"
-		if [ $? -ne 2 ]; then continue; fi
-		app_args[arch]="both"
 	fi
 	if [ "${app_args[arch]}" = both ]; then
-		echo "Start task with 'both' condition"
 		app_args[table]="$table_name (arm64-v8a)"
 		app_args[arch]="arm64-v8a"
 		app_args[module_prop_name]="${app_args[module_prop_name]}-arm64"
@@ -167,7 +163,6 @@ for table_name in $(toml_get_table_names); do
 		idx=$((idx + 1))
 		build_rv "$(declare -p app_args)" &
 	else
-		echo "Start task with 'native' condition"
 		idx=$((idx + 1))
 		build_rv "$(declare -p app_args)" &
 	fi
