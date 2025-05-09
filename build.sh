@@ -142,7 +142,7 @@ for table_name in $(toml_get_table_names); do
 	}
 
 	if [ "${app_args[arch]}" = all ]; then
-		local res
+		declare res=0
 		idx=$((idx + 1))
 		(build_rv "$(declare -p app_args)" | read -r res) &
 		wait -n
