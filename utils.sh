@@ -564,8 +564,7 @@ build_rv() {
 		if [ ! -f "$stock_apk" ]; then 
 			if [[ $arch == "all" ]]; then
 				epr "ERROR: Could not download '${table}' with version '${version}', arch '${arch}', dpi '${args[dpi]}', try download with each native version instead."
-				echo "2"
-				return 0
+				return 2
 			else
 				epr "ERROR: Could not download '${table}' with version '${version}', arch '${arch}', dpi '${args[dpi]}'"
 				return 1
