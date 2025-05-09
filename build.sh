@@ -144,8 +144,9 @@ for table_name in $(toml_get_table_names); do
 	if [ "${app_args[arch]}" = all ]; then
 		declare res=0
 		idx=$((idx + 1))
-		echo "Get return code: $(build_rv "$(declare -p app_args)")" &
+		(build_rv "$(declare -p app_args)" &) | read -r ret
 		wait -n
+		echo "Get return code: $ret"
 	fi
 	if [ "${app_args[arch]}" = both ]; then
 		app_args[table]="$table_name (arm64-v8a)"
